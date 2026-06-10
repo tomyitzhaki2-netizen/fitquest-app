@@ -108,8 +108,8 @@ select.inp{-webkit-appearance:none}
 </head>
 <body>
 <div class="toast" id="toast"></div>
-
-<!-- ════ AUTH ════ -->
+ 
+<!-- AUTH -->
 <div id="auth-scr">
   <div style="text-align:center;margin-bottom:22px">
     <div style="width:68px;height:68px;border-radius:20px;background:var(--g);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;box-shadow:0 0 36px rgba(0,230,118,.3)">
@@ -155,8 +155,8 @@ select.inp{-webkit-appearance:none}
     <button class="btn pri" onclick="doSignup()">צור חשבון</button>
   </div>
 </div>
-
-<!-- ════ APP ════ -->
+ 
+<!-- APP -->
 <div id="app">
   <div id="main-area">
     <div id="sidebar">
@@ -178,7 +178,7 @@ select.inp{-webkit-appearance:none}
       </button>
     </div>
     <div id="pages">
-
+ 
       <!-- HOME -->
       <div class="pg on" id="pg-home">
         <div class="bar">
@@ -214,7 +214,7 @@ select.inp{-webkit-appearance:none}
           </div>
         </div>
       </div>
-
+ 
       <!-- WORKOUT -->
       <div class="pg" id="pg-workout">
         <div class="bar">
@@ -269,7 +269,7 @@ select.inp{-webkit-appearance:none}
           </div>
         </div>
       </div>
-
+ 
       <!-- CHALLENGE WORKOUT -->
       <div class="pg" id="pg-challenge-workout">
         <div class="bar">
@@ -296,19 +296,19 @@ select.inp{-webkit-appearance:none}
           </div>
           <div class="card" style="background:var(--gdim2);margin-bottom:10px">
             <div style="font-size:12px;font-weight:700;color:var(--g);margin-bottom:4px">🏆 השיא שלך: <span id="chal-pr">—</span></div>
-            <div style="font-size:11px;color:var(--t2)">עשה כמה שאפשר. הסיבוב השלם שכל 3 תרגילים הושלמו — זה השיא.</div>
+            <div style="font-size:11px;color:var(--t2)">עשה כמה שאפשר. הסיבוב השלם — זה השיא.</div>
           </div>
           <div class="warn-box" id="chal-warn" style="display:none"></div>
           <button class="btn danger" onclick="endChallenge()">סיים ורשום שיא</button>
         </div>
       </div>
-
+ 
       <!-- RANK PAGE -->
       <div class="pg" id="pg-rank">
         <div class="bar"><div class="bar-title" id="rank-page-title">דירוג עולמי</div></div>
         <div class="scroll" id="rank-content"></div>
       </div>
-
+ 
       <!-- PROFILE -->
       <div class="pg" id="pg-profile">
         <div class="bar">
@@ -333,13 +333,13 @@ select.inp{-webkit-appearance:none}
           <div style="margin-top:4px"><button class="btn danger" onclick="doLogout()">התנתק</button></div>
         </div>
       </div>
-
-      <!-- GROUP PAGE -->
+ 
+      <!-- GROUP -->
       <div class="pg" id="pg-group">
         <div class="bar"><div class="bar-title">קבוצה</div></div>
         <div class="scroll" id="group-main"></div>
       </div>
-
+ 
       <!-- SETTINGS -->
       <div class="pg" id="pg-settings">
         <div class="bar">
@@ -348,7 +348,7 @@ select.inp{-webkit-appearance:none}
         </div>
         <div class="scroll">
           <div class="card"><div style="font-size:13px;font-weight:700;color:var(--g);margin-bottom:12px">שם</div><input class="inp" id="set-name" placeholder="שם מלא"><button class="btn sec" onclick="saveName()">שמור</button></div>
-          <div class="card" style="margin-top:10px"><div style="font-size:13px;font-weight:700;color:var(--g);margin-bottom:12px">שפה (שומרת בלי לשנות כיוון)</div><div id="lang-btns" style="display:flex;flex-wrap:wrap;gap:8px"></div></div>
+          <div class="card" style="margin-top:10px"><div style="font-size:13px;font-weight:700;color:var(--g);margin-bottom:12px">שפה</div><div id="lang-btns" style="display:flex;flex-wrap:wrap;gap:8px"></div></div>
           <div id="admin-panel" style="display:none;margin-top:10px">
             <div class="card" style="border-color:#ff6b00">
               <div style="font-size:13px;font-weight:700;color:#ff6b00;margin-bottom:12px">🔐 ADMIN</div>
@@ -358,10 +358,10 @@ select.inp{-webkit-appearance:none}
           </div>
         </div>
       </div>
-
+ 
     </div>
   </div>
-
+ 
   <div id="bnav">
     <button class="nb on" data-tab="home" onclick="goto('home')">
       <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M3 9.5L11 3l8 6.5V19a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z" stroke="currentColor" stroke-width="1.8"/><rect x="8" y="13" width="6" height="7" rx="1" stroke="currentColor" stroke-width="1.8"/></svg>
@@ -385,7 +385,7 @@ select.inp{-webkit-appearance:none}
     </button>
   </div>
 </div>
-
+ 
 <!-- EX INFO MODAL -->
 <div class="modal-bg" id="modal-bg" onclick="closeModal()">
   <div class="modal" onclick="event.stopPropagation()">
@@ -403,7 +403,7 @@ select.inp{-webkit-appearance:none}
     <button class="btn sec" style="margin-top:12px" onclick="closeModal()">סגור</button>
   </div>
 </div>
-
+ 
 <!-- RENAME MODAL -->
 <div class="modal-bg" id="rename-modal">
   <div class="modal" onclick="event.stopPropagation()">
@@ -413,303 +413,198 @@ select.inp{-webkit-appearance:none}
     <div style="display:flex;gap:8px"><button class="btn sec" style="flex:1" onclick="closeRenameModal()">ביטול</button><button class="btn pri" style="flex:1" onclick="doRename()">שמור</button></div>
   </div>
 </div>
-
+ 
 <script>
 // ══════════════════════════════════
-// SUPABASE
+// SUPABASE — cross-device sync
 // ══════════════════════════════════
 const SB_URL = 'https://uivhiayuxtgpyvgvjc.supabase.co';
-const SB_KEY = 'sb_publishable_84E28Lrcy_FXnShPJvSgIg_Q-04vRsx';
-
+const SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVpdmhpYXl1eGl4Z3B5dmd2amljIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk2Mjg0NTYsImV4cCI6MjA5NTIwNDQ1Nn0.2R-wyOYiAWwAaeYScquVprhr4YobgtZeESrpv7Pe3Kk';
+ 
 let SB_OK = false;
-
-async function sb(path, method='GET', body=null, extra=''){
+ 
+async function sbReq(path, method='GET', body=null){
   try{
     const opts={method,headers:{'apikey':SB_KEY,'Authorization':'Bearer '+SB_KEY,'Content-Type':'application/json','Prefer':'return=representation'}};
     if(body) opts.body=JSON.stringify(body);
-    const r=await fetch(SB_URL+'/rest/v1/'+path+extra,opts);
+    const r=await fetch(SB_URL+'/rest/v1/'+path,opts);
     const txt=await r.text();
     if(!r.ok) throw new Error(txt);
     return txt?JSON.parse(txt):[];
-  }catch(e){console.warn('SB error',e);return null;}
+  }catch(e){console.warn('SB:',e.message);return null;}
 }
-
-async function sbGet(table, filter=''){return sb(table+'?'+filter+'&select=*');}
-async function sbPost(table, data){return sb(table,'POST',data);}
-async function sbPatch(table, filter, data){return sb(table+'?'+filter,'PATCH',data);}
-
+ 
 async function initSB(){
-  const r=await sbGet('users','limit=1');
+  const r=await sbReq('users?limit=1&select=id');
   SB_OK=r!==null;
   const el=document.getElementById('auth-sync-status');
-  if(el) el.innerHTML=SB_OK?'<span class="sync-bar syn-ok">☁ מחובר לענן — דירוג בין כל המכשירים</span>':'<span class="sync-bar syn-err">⚠ בעיית חיבור — מצב מקומי</span>';
+  if(el) el.innerHTML=SB_OK
+    ?'<span class="sync-bar syn-ok">☁ מחובר לענן — דירוג בין כל המכשירים</span>'
+    :'<span class="sync-bar syn-err">⚠ בעיית חיבור — מצב מקומי</span>';
 }
-
+ 
 // ══════════════════════════════════
 // EXERCISES
 // ══════════════════════════════════
 const EX={
-  'שכיבות סמיכה רגילות':{m:'חזה, כתפיים, טרייספס',d:1,t:'pushup',hint:'גוף ישר כמו קרש. ידיים ברוחב כתפיים. ירד עד חזה ≈1ס״מ מהרצפה. ברכיים חייבות להיות באוויר.',steps:'1. שכב פנים למטה\n2. ידיים ברוחב כתפיים, אצבעות קדימה\n3. גוף ישר — ראש, גב, ישבן, רגליים\n4. ירד לאט — חזה כמעט נוגע ברצפה\n5. דחוף חזרה',errors:'❌ ישבן גבוה/נמוך מדי\n❌ ברכיים על הרצפה = לא מחשיב!\n❌ לא מגיע נמוך מספיק'},
-  'שכיבות סמיכה רחבות':{m:'חזה חיצוני',d:2,t:'pushup',hint:'ידיים רחבות מכתפיים. מרפקים מצביעים לצדדים.',steps:'1. ידיים רחבות מהכתפיים\n2. ירד עד מרפקים ב-90°\n3. דחוף',errors:'❌ ידיים לא רחבות מספיק'},
-  'שכיבות סמיכה צמודות':{m:'טרייספס',d:3,t:'pushup',hint:'מרפקים צמודים לגוף כל הדרך.',steps:'1. ידיים מתחת לחזה\n2. מרפקים צמודים לצלעות\n3. ירד, דחוף',errors:'❌ מרפקים יוצאים הצידה'},
-  'שכיבות סמיכה יהלום':{m:'טרייספס',d:4,t:'pushup',hint:'אגודלות ואצבעות קמיצה יוצרות יהלום.',steps:'1. ידיים ביצירת יהלום מתחת לחזה\n2. ירד לאט\n3. דחוף',errors:'❌ אצבעות פנימה מדי'},
-  'שכיבות סמיכה פייק':{m:'כתפיים',d:3,t:'pushup',hint:'ישבן גבוה — V הפוכה. ראש בין הידיים.',steps:'1. כלב כלפי מטה (ישבן למעלה)\n2. ירד עד ראש כמעט נוגע ברצפה\n3. דחוף',errors:'❌ ישבן נופל לפלאנק'},
-  'שכיבות סמיכה ארצ\'ר':{m:'חזה חד-צדדי',d:5,t:'pushup',hint:'ירד לצד אחד בכל חזרה.',steps:'1. ידיים רחבות מאוד\n2. ירד לצד אחד (יד כפופה, שנייה ישרה)\n3. לסירוגין',errors:'❌ גוף נוטה לצד'},
-  'סקוואטים רגילים':{m:'ירך קדמי, ישבן',d:1,t:'squat',hint:'ירך מקבילה לרצפה. עקבים על הרצפה. ברכיים מעל הבהונות.',steps:'1. ברוחב כתפיים, בהונות קצת החוצה\n2. גב ישר, חזה מורם\n3. ירד — ירך מקבילה לרצפה (90°)\n4. דחוף דרך העקבים',errors:'❌ ברכיים נופלות פנימה\n❌ עקבים עולים\n❌ לא עמוק מספיק (ירך לא מקבילה)'},
-  'סקוואטים קפיצה':{m:'ירך, לב',d:3,t:'squat',hint:'ירד עמוק, קפוץ גבוה, נחת רכות.',steps:'1. סקוואט רגיל עמוק\n2. קפוץ בחוזקה\n3. נחת רכות על בהונות',errors:'❌ נחיתה קשה על עקבים'},
-  'לאנג\'ים':{m:'ירך קדמי, ישבן',d:2,t:'squat',hint:'ברך קדמית מעל הקרסול. ברך אחורית כמעט נוגעת.',steps:'1. צעד גדול קדימה\n2. ירד — ברך אחורית כמעט נוגעת\n3. חזור, רגל שנייה',errors:'❌ ברך קדמית מעבר לבהון'},
-  'לאנג\'ים קפיצה':{m:'ירך, לב',d:4,t:'squat',hint:'קפוץ גבוה ביניהם.',steps:'1. לאנג\' עמוק\n2. קפוץ, החלף רגליים\n3. נחת ישר',errors:'❌ נחיתה קשה'},
-  'סקוואטים בולגריים':{m:'ירך חד-צדדי',d:4,t:'squat',hint:'רוב המשקל על הרגל הקדמית.',steps:'1. רגל אחורית על ספסל\n2. ירד בברך הקדמית\n3. חזור',errors:'❌ ברך קדמית פנימה'},
-  'סקוואטים חד-רגל':{m:'ירך, שיווי משקל',d:5,t:'squat',hint:'ידיים קדימה לשיווי משקל, ירד לאט.',steps:'1. עמוד על רגל אחת\n2. פשט רגל שנייה קדימה\n3. ירד לאט\n4. חזור',errors:'❌ ברך פנימה'},
-  'כפיפות בטן':{m:'בטן עליונה',d:1,t:'situp',hint:'הרם כתפיים מהרצפה. עבודה מהבטן.',steps:'1. שכב, ברכיים כפופות\n2. ידיים על חזה\n3. הרם כתפיים (לא רק הראש)\n4. חזור לאט',errors:'❌ משיכת הצוואר\n❌ רגליים קופצות'},
-  'כפיפות בטן אופניים':{m:'בטן צדדית',d:2,t:'situp',hint:'סיבוב אמיתי — מרפק לברך הנגדית.',steps:'1. שכב, ידיים מאחורי הראש\n2. מרפק ימין לברך שמאל\n3. לסירוגין',errors:'❌ מרפקים קרובים ללא סיבוב'},
-  'הרמות רגליים':{m:'בטן תחתית',d:3,t:'situp',hint:'הורד לאט — זה האימון האמיתי.',steps:'1. שכב שטוח\n2. הרם רגליים ישרות ל-90°\n3. הורד לאט ללא נגיעה',errors:'❌ רגליים כפופות\n❌ גב מקמר'},
-  'V-ups':{m:'בטן שלמה',d:4,t:'situp',hint:'הרמה בו-זמנית של גוף ורגליים.',steps:'1. שכב שטוח\n2. הרם גוף ורגליים יחד\n3. נגע בבהונות\n4. הורד לאט',errors:'❌ ברכיים כפופות'},
-  'פלאנק':{m:'ליבה שלמה',d:2,t:'plank',hint:'גוף ישר כמו קרש, בטן מכווצת, נשום.',steps:'1. גוף ישר מהראש לרגליים\n2. מרפקים מתחת לכתפיים\n3. בטן מכווצת',errors:'❌ ישבן גבוה/נמוך'},
-  'בורפי':{m:'כל הגוף, לב',d:4,t:'burpee',hint:'5 שלבים ברצף — לא לדלג על שכיבת הסמיכה.',steps:'1. כרע, ידיים ברצפה\n2. קפוץ לשכיבת סמיכה\n3. עשה שכיבת סמיכה\n4. קפוץ רגליים קדימה\n5. קפוץ למעלה',errors:'❌ דילוג על שכיבת הסמיכה'},
-  'טיפוס הר':{m:'ליבה, לב',d:3,t:'plank',hint:'ישבן ישר, קצב מהיר.',steps:'1. פלאנק עליון\n2. ברך ימין לחזה\n3. ברך שמאל לחזה\n4. קצב מהיר לסירוגין',errors:'❌ ישבן עולה'},
+  'שכיבות סמיכה רגילות':{m:'חזה, כתפיים, טרייספס',d:1,t:'pushup',hint:'גוף ישר כמו קרש. ברכיים חייבות להיות באוויר. ירד עד חזה כמעט נוגע.',steps:'1. שכב פנים למטה\n2. ידיים ברוחב כתפיים\n3. גוף ישר — ראש עד קרסוליים\n4. ירד עד חזה כמעט נוגע\n5. דחוף חזרה',errors:'❌ ישבן גבוה/נמוך\n❌ ברכיים על הרצפה = לא מחשיב!\n❌ לא נמוך מספיק'},
+  'שכיבות סמיכה רחבות':{m:'חזה חיצוני',d:2,t:'pushup',hint:'ידיים רחבות. מרפקים 90°.',steps:'1. ידיים רחבות מכתפיים\n2. ירד עד 90°\n3. דחוף',errors:'❌ ידיים לא רחבות'},
+  'שכיבות סמיכה צמודות':{m:'טרייספס',d:3,t:'pushup',hint:'מרפקים צמודים לגוף.',steps:'1. ידיים מתחת לחזה\n2. מרפקים צמודים\n3. ירד, דחוף',errors:'❌ מרפקים יוצאים'},
+  'שכיבות סמיכה יהלום':{m:'טרייספס',d:4,t:'pushup',hint:'ידיים יוצרות יהלום.',steps:'1. ידיים ביצירת יהלום\n2. ירד, דחוף',errors:'❌ אצבעות פנימה'},
+  'שכיבות סמיכה פייק':{m:'כתפיים',d:3,t:'pushup',hint:'ישבן גבוה — V הפוכה.',steps:'1. כלב כלפי מטה\n2. ירד, ראש בין הידיים\n3. דחוף',errors:'❌ ישבן נופל'},
+  'שכיבות סמיכה ארצ\'ר':{m:'חזה חד-צדדי',d:5,t:'pushup',hint:'ירד לצד אחד.',steps:'1. ידיים רחבות\n2. ירד לצד אחד\n3. לסירוגין',errors:'❌ גוף נוטה'},
+  'סקוואטים רגילים':{m:'ירך קדמי, ישבן',d:1,t:'squat',hint:'ירך מקבילה לרצפה. עקבים על הרצפה. ברכיים מעל הבהונות.',steps:'1. ברוחב כתפיים\n2. ירד עד ירך מקבילה\n3. דחוף דרך העקבים',errors:'❌ ברכיים פנימה\n❌ לא עמוק מספיק'},
+  'סקוואטים קפיצה':{m:'ירך, לב',d:3,t:'squat',hint:'נחיתה רכה.',steps:'1. סקוואט\n2. קפוץ\n3. נחת רכות',errors:'❌ נחיתה קשה'},
+  'לאנג\'ים':{m:'ירך קדמי, ישבן',d:2,t:'squat',hint:'ברך קדמית מעל הקרסול.',steps:'1. צעד גדול קדימה\n2. ירד\n3. חזור, רגל שנייה',errors:'❌ ברך מעבר לבהון'},
+  'לאנג\'ים קפיצה':{m:'ירך, לב',d:4,t:'squat',hint:'קפוץ גבוה.',steps:'1. לאנג\'\n2. קפוץ, החלף',errors:'❌ נחיתה קשה'},
+  'סקוואטים בולגריים':{m:'ירך חד-צדדי',d:4,t:'squat',hint:'רוב המשקל על הרגל הקדמית.',steps:'1. רגל אחורית על ספסל\n2. ירד\n3. חזור',errors:'❌ ברך פנימה'},
+  'סקוואטים חד-רגל':{m:'ירך, שיווי משקל',d:5,t:'squat',hint:'ידיים קדימה, ירד לאט.',steps:'1. על רגל אחת\n2. ירד לאט\n3. חזור',errors:'❌ ברך פנימה'},
+  'כפיפות בטן':{m:'בטן עליונה',d:1,t:'situp',hint:'עבודה מהבטן.',steps:'1. שכב, ברכיים כפופות\n2. הרם פלג גוף עליון\n3. חזור לאט',errors:'❌ משיכת הצוואר'},
+  'כפיפות בטן אופניים':{m:'בטן צדדית',d:2,t:'situp',hint:'סיבוב אמיתי.',steps:'1. שכב\n2. מרפק ימין לברך שמאל\n3. לחלופין',errors:'❌ מרפקים קרובים'},
+  'הרמות רגליים':{m:'בטן תחתית',d:3,t:'situp',hint:'הורד לאט.',steps:'1. שכב שטוח\n2. הרם ל-90°\n3. הורד לאט',errors:'❌ גב מקמר'},
+  'V-ups':{m:'בטן שלמה',d:4,t:'situp',hint:'הרמה בו-זמנית.',steps:'1. שכב שטוח\n2. הרם גוף ורגליים\n3. נגע בבהונות',errors:'❌ ברכיים כפופות'},
+  'פלאנק':{m:'ליבה שלמה',d:2,t:'plank',hint:'גוף ישר, בטן מכווצת.',steps:'1. גוף ישר\n2. מרפקים מתחת לכתפיים\n3. בטן מכווצת',errors:'❌ ישבן גבוה/נמוך'},
+  'בורפי':{m:'כל הגוף, לב',d:4,t:'burpee',hint:'קצב אחיד.',steps:'1. כרע, ידיים ברצפה\n2. שכיבת סמיכה\n3. קפוץ קדימה\n4. קפוץ למעלה',errors:'❌ דילוג על שכיבת הסמיכה'},
+  'טיפוס הר':{m:'ליבה, לב',d:3,t:'plank',hint:'ישבן ישר, קצב מהיר.',steps:'1. פלאנק עליון\n2. ברך ימין לחזה\n3. ברך שמאל לחזה\n4. קצב מהיר',errors:'❌ ישבן עולה'},
 };
-
+ 
 // ══════════════════════════════════
-// STAGE GENERATOR
+// STAGE GENERATOR — 1000 stages with variety
 // ══════════════════════════════════
 const PUSHUPS=['שכיבות סמיכה רגילות','שכיבות סמיכה רחבות','שכיבות סמיכה צמודות','שכיבות סמיכה יהלום','שכיבות סמיכה פייק','שכיבות סמיכה ארצ\'ר'];
 const SQUATS=['סקוואטים רגילים','לאנג\'ים','סקוואטים קפיצה','לאנג\'ים קפיצה','סקוואטים בולגריים','סקוואטים חד-רגל'];
 const CORES=['כפיפות בטן','כפיפות בטן אופניים','הרמות רגליים','V-ups','פלאנק','בורפי','טיפוס הר'];
-const TIER={1:1,2:10,3:30,4:80,5:200};
-
-function exOk(name,n){
-  const tiers={'שכיבות סמיכה רגילות':1,'סקוואטים רגילים':1,'כפיפות בטן':1,'שכיבות סמיכה רחבות':2,'לאנג\'ים':2,'כפיפות בטן אופניים':2,'פלאנק':2,'שכיבות סמיכה צמודות':3,'שכיבות סמיכה פייק':3,'סקוואטים קפיצה':3,'הרמות רגליים':3,'טיפוס הר':3,'שכיבות סמיכה יהלום':4,'לאנג\'ים קפיצה':4,'סקוואטים בולגריים':4,'V-ups':4,'בורפי':4,'שכיבות סמיכה ארצ\'ר':5,'סקוואטים חד-רגל':5};
-  return n>=(TIER[tiers[name]]||1);
-}
-
+const TIER_MIN={'שכיבות סמיכה רגילות':1,'סקוואטים רגילים':1,'כפיפות בטן':1,'שכיבות סמיכה רחבות':10,'לאנג\'ים':10,'כפיפות בטן אופניים':10,'פלאנק':10,'שכיבות סמיכה צמודות':30,'שכיבות סמיכה פייק':30,'סקוואטים קפיצה':30,'הרמות רגליים':30,'טיפוס הר':30,'שכיבות סמיכה יהלום':80,'לאנג\'ים קפיצה':80,'סקוואטים בולגריים':80,'V-ups':80,'בורפי':80,'שכיבות סמיכה ארצ\'ר':200,'סקוואטים חד-רגל':200};
 const BASE={pushup:8,squat:10,situp:15,plank:30,burpee:5};
+ 
 const _sc={};
 function getStage(n){
   if(_sc[n]) return _sc[n];
   const numEx=n<=20?2:n<=200?3:4;
   const numSets=n<=10?2:n<=50?3:n<=200?4:n<=500?5:6;
   const mult=1+(Math.log(n)/Math.log(1000))*2.2;
-  const pi=n%PUSHUPS.length, si=(n+2)%SQUATS.length, ci=(n+4)%CORES.length;
-  let p=null,s=null;
-  for(let i=0;i<PUSHUPS.length;i++){const e=PUSHUPS[(pi+i)%PUSHUPS.length];if(exOk(e,n)){p=e;break;}}
-  for(let i=0;i<SQUATS.length;i++){const e=SQUATS[(si+i)%SQUATS.length];if(exOk(e,n)){s=e;break;}}
-  const chosen=[p||'שכיבות סמיכה רגילות',s||'סקוואטים רגילים'];
-  if(numEx>=3){for(let i=0;i<CORES.length;i++){const e=CORES[(ci+i)%CORES.length];if(exOk(e,n)&&!chosen.includes(e)){chosen.push(e);break;}}}
-  if(numEx>=4){const ci2=(n+6)%CORES.length;for(let i=0;i<CORES.length;i++){const e=CORES[(ci2+i)%CORES.length];if(exOk(e,n)&&!chosen.includes(e)){chosen.push(e);break;}}}
+  const pick=(arr,seed)=>{for(let i=0;i<arr.length;i++){const e=arr[(seed+i)%arr.length];if(n>=(TIER_MIN[e]||1))return e;}return arr[0];};
+  const p=pick(PUSHUPS,n%PUSHUPS.length);
+  const s=pick(SQUATS,(n+2)%SQUATS.length);
+  const chosen=[p,s];
+  if(numEx>=3){const c=pick(CORES.filter(e=>!chosen.includes(e)),(n+4)%CORES.length);if(c)chosen.push(c);}
+  if(numEx>=4){const c2=pick(CORES.filter(e=>!chosen.includes(e)),(n+6)%CORES.length);if(c2)chosen.push(c2);}
   _sc[n]={id:n,name:`שלב ${n}`,exs:chosen.map(e=>({e,n:Math.max(3,Math.round((BASE[(EX[e]||{t:'situp'}).t]||10)*mult))})),sets:numSets};
   return _sc[n];
 }
 const TOTAL=1000;
-
+ 
 // ══════════════════════════════════
-// STICK FIGURE DEMO ANIMATION
-// Full human body: head, torso, arms, legs with proper proportions
+// STICK FIGURE ANIMATION
+// Full human body with proper proportions
 // ══════════════════════════════════
-
-// Each frame: joint positions normalized 0-1
-// Joints: head_cx, head_cy, neck, ls(left shoulder), rs, le(left elbow), re,
-//         lw(left wrist), rw, lh(left hip), rh, lk(left knee), rk, lf(left foot), rf
-
-const DEMOS = {
-  pushup: {
-    frames: [
-      // UP: body horizontal, arms extended
-      {hd:[.5,.17], nk:[.5,.24], ls:[.36,.3], rs:[.64,.3], le:[.24,.42], re:[.76,.42], lw:[.19,.55], rw:[.81,.55], lh:[.42,.38], rh:[.58,.38], lk:[.44,.58], rk:[.56,.58], lf:[.44,.78], rf:[.56,.78]},
-      // DOWN: elbows bent ~90deg, body still horizontal
-      {hd:[.5,.24], nk:[.5,.31], ls:[.36,.37], rs:[.64,.37], le:[.24,.45], re:[.76,.45], lw:[.19,.55], rw:[.81,.55], lh:[.42,.38], rh:[.58,.38], lk:[.44,.58], rk:[.56,.58], lf:[.44,.78], rf:[.56,.78]},
-    ], cyc:[0,1,1,0], spd:32
-  },
-  squat: {
-    frames: [
-      // STANDING
-      {hd:[.5,.08], nk:[.5,.15], ls:[.38,.21], rs:[.62,.21], le:[.32,.34], re:[.68,.34], lw:[.3,.48], rw:[.7,.48], lh:[.43,.53], rh:[.57,.53], lk:[.43,.71], rk:[.57,.71], lf:[.41,.9], rf:[.59,.9]},
-      // DEEP SQUAT: hips low, thighs parallel
-      {hd:[.5,.16], nk:[.5,.23], ls:[.36,.29], rs:[.64,.29], le:[.26,.42], re:[.74,.42], lw:[.22,.55], rw:[.78,.55], lh:[.41,.65], rh:[.59,.65], lk:[.34,.8], rk:[.66,.8], lf:[.37,.92], rf:[.63,.92]},
-    ], cyc:[0,1,1,0], spd:36
-  },
-  situp: {
-    frames: [
-      // LYING FLAT (horizontal layout)
-      {hd:[.12,.5], nk:[.19,.5], ls:[.27,.45], rs:[.42,.45], le:[.31,.36], re:[.46,.36], lw:[.33,.29], rw:[.48,.29], lh:[.57,.5], rh:[.65,.5], lk:[.74,.56], rk:[.8,.56], lf:[.88,.62], rf:[.93,.62]},
-      // UP: torso raised ~45°
-      {hd:[.22,.33], nk:[.29,.39], ls:[.37,.44], rs:[.51,.44], le:[.35,.34], re:[.49,.34], lw:[.33,.27], rw:[.47,.27], lh:[.58,.52], rh:[.66,.52], lk:[.74,.58], rk:[.8,.58], lf:[.88,.64], rf:[.93,.64]},
-    ], cyc:[0,1,1,0], spd:33
-  },
-  plank: {
-    frames: [
-      {hd:[.5,.12], nk:[.5,.19], ls:[.35,.25], rs:[.65,.25], le:[.24,.38], re:[.76,.38], lw:[.19,.51], rw:[.81,.51], lh:[.42,.3], rh:[.58,.3], lk:[.44,.52], rk:[.56,.52], lf:[.44,.72], rf:[.56,.72]},
-      {hd:[.5,.12], nk:[.5,.19], ls:[.35,.26], rs:[.65,.26], le:[.24,.39], re:[.76,.39], lw:[.19,.52], rw:[.81,.52], lh:[.42,.31], rh:[.58,.31], lk:[.44,.53], rk:[.56,.53], lf:[.44,.73], rf:[.56,.73]},
-    ], cyc:[0,1,1,0], spd:55
-  },
-  burpee: {
-    frames: [
-      // Standing
-      {hd:[.5,.08], nk:[.5,.15], ls:[.38,.21], rs:[.62,.21], le:[.32,.34], re:[.68,.34], lw:[.3,.48], rw:[.7,.48], lh:[.43,.53], rh:[.57,.53], lk:[.43,.71], rk:[.57,.71], lf:[.41,.9], rf:[.59,.9]},
-      // Crouching (hands to floor)
-      {hd:[.5,.22], nk:[.5,.29], ls:[.38,.35], rs:[.62,.35], le:[.3,.47], re:[.7,.47], lw:[.26,.59], rw:[.74,.59], lh:[.43,.62], rh:[.57,.62], lk:[.38,.78], rk:[.62,.78], lf:[.38,.92], rf:[.62,.92]},
-      // Plank/pushup position
-      {hd:[.5,.17], nk:[.5,.24], ls:[.36,.3], rs:[.64,.3], le:[.24,.42], re:[.76,.42], lw:[.19,.55], rw:[.81,.55], lh:[.42,.38], rh:[.58,.38], lk:[.44,.58], rk:[.56,.58], lf:[.44,.78], rf:[.56,.78]},
-      // Jump arms up
-      {hd:[.5,.05], nk:[.5,.12], ls:[.38,.18], rs:[.62,.18], le:[.28,.09], re:[.72,.09], lw:[.25,.03], rw:[.75,.03], lh:[.43,.53], rh:[.57,.53], lk:[.43,.71], rk:[.57,.71], lf:[.41,.9], rf:[.59,.9]},
-    ], cyc:[0,1,2,1,0,3,3,0], spd:25
-  }
+const DEMOS={
+  pushup:{frames:[
+    {hd:[.5,.17],nk:[.5,.24],ls:[.36,.3],rs:[.64,.3],le:[.24,.42],re:[.76,.42],lw:[.19,.55],rw:[.81,.55],lh:[.42,.37],rh:[.58,.37],lk:[.44,.57],rk:[.56,.57],lf:[.44,.77],rf:[.56,.77]},
+    {hd:[.5,.24],nk:[.5,.31],ls:[.36,.37],rs:[.64,.37],le:[.24,.45],re:[.76,.45],lw:[.19,.55],rw:[.81,.55],lh:[.42,.37],rh:[.58,.37],lk:[.44,.57],rk:[.56,.57],lf:[.44,.77],rf:[.56,.77]},
+  ],cyc:[0,1,1,0],spd:32},
+  squat:{frames:[
+    {hd:[.5,.08],nk:[.5,.15],ls:[.38,.21],rs:[.62,.21],le:[.32,.34],re:[.68,.34],lw:[.3,.48],rw:[.7,.48],lh:[.43,.53],rh:[.57,.53],lk:[.43,.71],rk:[.57,.71],lf:[.41,.9],rf:[.59,.9]},
+    {hd:[.5,.16],nk:[.5,.23],ls:[.36,.29],rs:[.64,.29],le:[.26,.42],re:[.74,.42],lw:[.22,.55],rw:[.78,.55],lh:[.41,.65],rh:[.59,.65],lk:[.34,.8],rk:[.66,.8],lf:[.37,.92],rf:[.63,.92]},
+  ],cyc:[0,1,1,0],spd:36},
+  situp:{frames:[
+    {hd:[.12,.5],nk:[.19,.5],ls:[.27,.45],rs:[.46,.45],le:[.31,.36],re:[.5,.36],lw:[.33,.29],rw:[.52,.29],lh:[.6,.5],rh:[.7,.5],lk:[.76,.56],rk:[.82,.56],lf:[.88,.62],rf:[.93,.62]},
+    {hd:[.22,.33],nk:[.29,.39],ls:[.37,.44],rs:[.54,.44],le:[.35,.34],re:[.52,.34],lw:[.33,.27],rw:[.5,.27],lh:[.62,.52],rh:[.72,.52],lk:[.76,.58],rk:[.82,.58],lf:[.88,.64],rf:[.93,.64]},
+  ],cyc:[0,1,1,0],spd:33},
+  plank:{frames:[
+    {hd:[.5,.12],nk:[.5,.19],ls:[.35,.25],rs:[.65,.25],le:[.24,.38],re:[.76,.38],lw:[.19,.51],rw:[.81,.51],lh:[.42,.3],rh:[.58,.3],lk:[.44,.52],rk:[.56,.52],lf:[.44,.72],rf:[.56,.72]},
+    {hd:[.5,.12],nk:[.5,.19],ls:[.35,.26],rs:[.65,.26],le:[.24,.39],re:[.76,.39],lw:[.19,.52],rw:[.81,.52],lh:[.42,.31],rh:[.58,.31],lk:[.44,.53],rk:[.56,.53],lf:[.44,.73],rf:[.56,.73]},
+  ],cyc:[0,1,1,0],spd:55},
+  burpee:{frames:[
+    {hd:[.5,.08],nk:[.5,.15],ls:[.38,.21],rs:[.62,.21],le:[.32,.34],re:[.68,.34],lw:[.3,.48],rw:[.7,.48],lh:[.43,.53],rh:[.57,.53],lk:[.43,.71],rk:[.57,.71],lf:[.41,.9],rf:[.59,.9]},
+    {hd:[.5,.22],nk:[.5,.29],ls:[.38,.35],rs:[.62,.35],le:[.3,.47],re:[.7,.47],lw:[.26,.59],rw:[.74,.59],lh:[.43,.62],rh:[.57,.62],lk:[.38,.78],rk:[.62,.78],lf:[.38,.92],rf:[.62,.92]},
+    {hd:[.5,.17],nk:[.5,.24],ls:[.36,.3],rs:[.64,.3],le:[.24,.42],re:[.76,.42],lw:[.19,.55],rw:[.81,.55],lh:[.42,.37],rh:[.58,.37],lk:[.44,.57],rk:[.56,.57],lf:[.44,.77],rf:[.56,.77]},
+    {hd:[.5,.05],nk:[.5,.12],ls:[.38,.18],rs:[.62,.18],le:[.28,.09],re:[.72,.09],lw:[.25,.03],rw:[.75,.03],lh:[.43,.53],rh:[.57,.53],lk:[.43,.71],rk:[.57,.71],lf:[.41,.9],rf:[.59,.9]},
+  ],cyc:[0,1,2,1,0,3,3,0],spd:25},
 };
-
-function getDemoType(exName){
-  const ex=EX[exName];
-  if(!ex) return 'pushup';
-  if(ex.t==='burpee') return 'burpee';
-  return ex.t;
-}
-
+ 
+function getDT(n){const ex=EX[n];if(!ex)return'pushup';if(ex.t==='burpee')return'burpee';return ex.t;}
 function lerp(a,b,t){return a+(b-a)*t;}
-function lerpFrame(a,b,t){
-  const r={};
-  Object.keys(a).forEach(k=>{
-    if(b[k]) r[k]=[lerp(a[k][0],b[k][0],t),lerp(a[k][1],b[k][1],t)];
-    else r[k]=a[k];
-  });
-  return r;
-}
-
-// Draw a full human figure (not just dots)
-function drawHuman(ctx, W, H, frame, primaryCol='#00e676', accentCol='#00c853'){
-  const x=k=>frame[k]?frame[k][0]*W:W/2;
-  const y=k=>frame[k]?frame[k][1]*H:H/2;
-
-  ctx.save();
-  ctx.lineCap='round';
-  ctx.lineJoin='round';
-
-  // ─── FILLED SHAPES for body volume ───
+function lerpF(a,b,t){const r={};Object.keys(a).forEach(k=>{if(b[k])r[k]=[lerp(a[k][0],b[k][0],t),lerp(a[k][1],b[k][1],t)];else r[k]=a[k];});return r;}
+ 
+// Draw full human body (filled + outlined)
+function drawHuman(ctx,W,H,f,col='#00e676'){
+  const x=k=>f[k]?f[k][0]*W:W/2, y=k=>f[k]?f[k][1]*H:H/2;
+  const T=Math.min(W,H)*.05;
+  ctx.save();ctx.lineCap='round';ctx.lineJoin='round';
+ 
   // Torso fill
-  if(frame.ls&&frame.rs&&frame.rh&&frame.lh){
-    ctx.beginPath();
-    ctx.moveTo(x('ls'),y('ls'));
-    ctx.lineTo(x('rs'),y('rs'));
-    ctx.lineTo(x('rh'),y('rh'));
-    ctx.lineTo(x('lh'),y('lh'));
-    ctx.closePath();
-    ctx.fillStyle=primaryCol+'20';
-    ctx.fill();
+  if(f.ls&&f.rs&&f.rh&&f.lh){
+    ctx.beginPath();ctx.moveTo(x('ls'),y('ls'));ctx.lineTo(x('rs'),y('rs'));ctx.lineTo(x('rh'),y('rh'));ctx.lineTo(x('lh'),y('lh'));ctx.closePath();
+    ctx.fillStyle=col+'20';ctx.fill();
   }
-
-  // ─── LIMBS ───
-  const thick=Math.min(W,H)*0.05; // limb thickness relative to canvas
-  function drawLimb(a, b, width, col){
-    if(!frame[a]||!frame[b]) return;
-    const ax=x(a), ay=y(a), bx=x(b), by=y(b);
-    const dx=bx-ax, dy=by-ay;
-    const len=Math.sqrt(dx*dx+dy*dy);
-    if(len<1) return;
-    const nx=-dy/len*width/2, ny=dx/len*width/2;
-    ctx.beginPath();
-    ctx.moveTo(ax+nx,ay+ny);
-    ctx.lineTo(bx+nx,by+ny);
-    ctx.lineTo(bx-nx,by-ny);
-    ctx.lineTo(ax-nx,ay-ny);
-    ctx.closePath();
-    ctx.fillStyle=col;
-    ctx.fill();
+ 
+  // Filled limbs (rectangles for thickness)
+  function limb(a,b,w,c){
+    if(!f[a]||!f[b])return;
+    const ax=x(a),ay=y(a),bx=x(b),by=y(b);
+    const dx=bx-ax,dy=by-ay,len=Math.sqrt(dx*dx+dy*dy);
+    if(len<1)return;
+    const nx=-dy/len*w/2,ny=dx/len*w/2;
+    ctx.beginPath();ctx.moveTo(ax+nx,ay+ny);ctx.lineTo(bx+nx,by+ny);ctx.lineTo(bx-nx,by-ny);ctx.lineTo(ax-nx,ay-ny);ctx.closePath();
+    ctx.fillStyle=c;ctx.fill();
   }
-
-  // Limb colors
-  const torsoCol=primaryCol+'cc';
-  const armCol=accentCol+'bb';
-  const legCol=primaryCol+'99';
-
-  // Torso
-  drawLimb('nk','lh',thick*1.2,torsoCol);
-  drawLimb('nk','rh',thick*1.2,torsoCol);
-
-  // Upper arms
-  drawLimb('ls','le',thick*0.9,armCol);
-  drawLimb('rs','re',thick*0.9,armCol);
-  // Forearms
-  drawLimb('le','lw',thick*0.75,armCol);
-  drawLimb('re','rw',thick*0.75,armCol);
-
-  // Thighs
-  drawLimb('lh','lk',thick*1.0,legCol);
-  drawLimb('rh','rk',thick*1.0,legCol);
-  // Shins
-  drawLimb('lk','lf',thick*0.8,legCol);
-  drawLimb('rk','rf',thick*0.8,legCol);
-
-  // ─── OUTLINE BONES ───
-  ctx.strokeStyle=primaryCol;
-  ctx.lineWidth=2.5;
-  [['nk','ls'],['nk','rs'],['ls','le'],['rs','re'],['le','lw'],['re','rw'],
-   ['nk','lh'],['nk','rh'],['lh','rh'],['lh','lk'],['rh','rk'],['lk','lf'],['rk','rf']].forEach(([a,b])=>{
-    if(!frame[a]||!frame[b]) return;
-    ctx.beginPath();ctx.moveTo(x(a),y(a));ctx.lineTo(x(b),y(b));ctx.stroke();
+  const ta=col+'bb',arm=col+'99',leg=col+'88';
+  limb('nk','lh',T*1.2,ta);limb('nk','rh',T*1.2,ta);
+  limb('ls','le',T*.9,arm);limb('rs','re',T*.9,arm);limb('le','lw',T*.75,arm);limb('re','rw',T*.75,arm);
+  limb('lh','lk',T,leg);limb('rh','rk',T,leg);limb('lk','lf',T*.8,leg);limb('rk','rf',T*.8,leg);
+ 
+  // Outline bones
+  ctx.strokeStyle=col;ctx.lineWidth=2.5;
+  [['nk','ls'],['nk','rs'],['ls','le'],['rs','re'],['le','lw'],['re','rw'],['nk','lh'],['nk','rh'],['lh','rh'],['lh','lk'],['rh','rk'],['lk','lf'],['rk','rf']].forEach(([a,b])=>{
+    if(!f[a]||!f[b])return;ctx.beginPath();ctx.moveTo(x(a),y(a));ctx.lineTo(x(b),y(b));ctx.stroke();
   });
-
-  // ─── HEAD ───
-  const hx=x('hd'), hy=y('hd');
-  const headR=Math.min(W,H)*0.085;
-  // Neck
-  if(frame.nk){ctx.beginPath();ctx.moveTo(hx,hy+headR*0.8);ctx.lineTo(x('nk'),y('nk'));ctx.strokeStyle=primaryCol;ctx.lineWidth=thick*0.9;ctx.stroke();}
-  // Head circle (filled)
-  ctx.beginPath();ctx.arc(hx,hy,headR,0,Math.PI*2);
-  ctx.fillStyle=primaryCol+'25';ctx.fill();
-  ctx.strokeStyle=primaryCol;ctx.lineWidth=2.5;ctx.stroke();
-  // Face details
-  ctx.fillStyle=primaryCol;
-  ctx.beginPath();ctx.arc(hx-headR*.3,hy-headR*.15,headR*.1,0,Math.PI*2);ctx.fill();
-  ctx.beginPath();ctx.arc(hx+headR*.3,hy-headR*.15,headR*.1,0,Math.PI*2);ctx.fill();
-  ctx.beginPath();ctx.arc(hx,hy+headR*.25,headR*.2,0,Math.PI);ctx.stroke();
-
-  // ─── JOINTS (circles) ───
-  const bigJ=['ls','rs','le','re','lk','rk','lh','rh'];
-  const smallJ=['lw','rw','lf','rf'];
-  bigJ.forEach(k=>{
-    if(!frame[k]) return;
-    ctx.beginPath();ctx.arc(x(k),y(k),thick*.55,0,Math.PI*2);
-    ctx.fillStyle=primaryCol;ctx.fill();
-    ctx.strokeStyle='rgba(0,0,0,.5)';ctx.lineWidth=1.5;ctx.stroke();
-  });
-  smallJ.forEach(k=>{
-    if(!frame[k]) return;
-    ctx.beginPath();ctx.arc(x(k),y(k),thick*.4,0,Math.PI*2);
-    ctx.fillStyle=primaryCol+'aa';ctx.fill();
-  });
-
+ 
+  // Head
+  const hx=x('hd'),hy=y('hd'),hr=Math.min(W,H)*.085;
+  if(f.nk){ctx.beginPath();ctx.moveTo(hx,hy+hr*.8);ctx.lineTo(x('nk'),y('nk'));ctx.strokeStyle=col;ctx.lineWidth=T*.9;ctx.stroke();}
+  ctx.beginPath();ctx.arc(hx,hy,hr,0,Math.PI*2);ctx.fillStyle=col+'28';ctx.fill();ctx.strokeStyle=col;ctx.lineWidth=2.5;ctx.stroke();
+  // Face (eyes + smile)
+  ctx.fillStyle=col;
+  ctx.beginPath();ctx.arc(hx-hr*.3,hy-hr*.15,hr*.1,0,Math.PI*2);ctx.fill();
+  ctx.beginPath();ctx.arc(hx+hr*.3,hy-hr*.15,hr*.1,0,Math.PI*2);ctx.fill();
+  ctx.beginPath();ctx.arc(hx,hy+hr*.2,hr*.22,0,Math.PI);ctx.strokeStyle=col;ctx.lineWidth=2;ctx.stroke();
+ 
+  // Joints
+  ['ls','rs','le','re','lk','rk','lh','rh'].forEach(k=>{if(!f[k])return;ctx.beginPath();ctx.arc(x(k),y(k),T*.55,0,Math.PI*2);ctx.fillStyle=col;ctx.fill();ctx.strokeStyle='rgba(0,0,0,.5)';ctx.lineWidth=1.5;ctx.stroke();});
+  ['lw','rw'].forEach(k=>{if(!f[k])return;ctx.beginPath();ctx.arc(x(k),y(k),T*.4,0,Math.PI*2);ctx.fillStyle=col+'aa';ctx.fill();});
+  // Heels in orange
+  ['lf','rf'].forEach(k=>{if(!f[k])return;ctx.beginPath();ctx.arc(x(k),y(k),T*.45,0,Math.PI*2);ctx.fillStyle='#ffab40';ctx.fill();ctx.strokeStyle='rgba(0,0,0,.4)';ctx.lineWidth=1.5;ctx.stroke();});
   ctx.restore();
 }
-
-function startHumanAnim(cvs, demoType, col='#00e676', onFrame){
-  const demo=DEMOS[demoType]||DEMOS.pushup;
-  let tick=0, pos=0, running=true, id;
+ 
+function startAnim(cvs,type,col='#00e676',onF){
+  const d=DEMOS[type]||DEMOS.pushup;
+  let tick=0,pos=0,running=true,id;
   function loop(){
-    if(!running) return;
-    id=requestAnimationFrame(loop);
-    tick++;
-    if(tick%demo.spd===0) pos=(pos+1)%demo.cyc.length;
-    const fi=demo.cyc[pos], ni=demo.cyc[(pos+1)%demo.cyc.length];
-    const t=(tick%demo.spd)/demo.spd;
-    const frame=lerpFrame(demo.frames[fi], demo.frames[ni], t);
-    const W=cvs.offsetWidth||200;
-    const H=parseInt(cvs.getAttribute('height')||cvs.style.height||'160');
-    if(cvs.width!==W) cvs.width=W;
-    const ctx=cvs.getContext('2d');
-    ctx.clearRect(0,0,W,H);
-    // Subtle grid background
-    ctx.strokeStyle='rgba(0,230,118,.04)';ctx.lineWidth=1;
+    if(!running)return;id=requestAnimationFrame(loop);tick++;
+    if(tick%d.spd===0)pos=(pos+1)%d.cyc.length;
+    const fi=d.cyc[pos],ni=d.cyc[(pos+1)%d.cyc.length];
+    const t=(tick%d.spd)/d.spd;
+    const frame=lerpF(d.frames[fi],d.frames[ni],t);
+    const W=cvs.offsetWidth||200,H=parseInt(cvs.getAttribute('height')||cvs.style.height||'160');
+    if(cvs.width!==W)cvs.width=W;
+    const ctx=cvs.getContext('2d');ctx.clearRect(0,0,W,H);
+    // Grid
+    ctx.strokeStyle=col+'05';ctx.lineWidth=1;
     for(let gx=0;gx<W;gx+=24){ctx.beginPath();ctx.moveTo(gx,0);ctx.lineTo(gx,H);ctx.stroke();}
     for(let gy=0;gy<H;gy+=24){ctx.beginPath();ctx.moveTo(0,gy);ctx.lineTo(W,gy);ctx.stroke();}
-    drawHuman(ctx, W, H, frame, col, '#69f0ae');
-    if(onFrame) onFrame(frame);
+    drawHuman(ctx,W,H,frame,col);
+    if(onF)onF(frame);
   }
   loop();
-  return ()=>{running=false;cancelAnimationFrame(id);};
+  return()=>{running=false;cancelAnimationFrame(id);};
 }
-
+ 
 // ══════════════════════════════════
-// CONSTANTS & STATE
+// CONSTANTS
 // ══════════════════════════════════
-const ADMIN='tom yitzhaki', ADMIN_PASS='123456789', TOM='tom yitzhaki';
+const ADMIN='tom yitzhaki',ADMIN_PASS='123456789',TOM='tom yitzhaki';
 const CNAMES={IL:'ישראל',US:'United States',GB:'United Kingdom',DE:'Deutschland',FR:'France',ES:'España',IT:'Italia',RU:'Россия',UA:'Україна',PL:'Polska',BR:'Brasil',MX:'México',JP:'日本',KR:'한국',CN:'中国',IN:'India',AU:'Australia',CA:'Canada',TR:'Türkiye',NL:'Nederland',SE:'Sverige',PT:'Portugal',SA:'السعودية',EG:'مصر',ZA:'South Africa',NG:'Nigeria',AR:'Argentina'};
 const LANGS={he:'עברית',en:'English',ar:'العربية',es:'Español',fr:'Français',ru:'Русский',de:'Deutsch',pt:'Português',it:'Italiano',zh:'中文',ja:'日本語',ko:'한국어',tr:'Türkçe',pl:'Polski',nl:'Nederlands',sv:'Svenska',uk:'Українська',hi:'हिन्दी'};
 const ACHV=[
@@ -719,76 +614,71 @@ const ACHV=[
   {id:'r3',label:'להבה',desc:'3 ימי רצף',icon:'🔥',bg:'rgba(255,82,82,.1)',need:u=>(u.streak||0)>=3},
   {id:'r7',label:'שבוע',desc:'7 ימי רצף',icon:'💪',bg:'rgba(0,200,83,.1)',need:u=>(u.streak||0)>=7},
 ];
-
-let cu=null, prevPg='home', curSideNav='world';
-let camStream=null, poseOn=false, animId=null, camGranted=false;
+ 
+// ══════════════════════════════════
+// STATE
+// ══════════════════════════════════
+let users={},cu=null,prevPg='home',curSideNav='world';
+let camStream=null,poseOn=false,animId=null,camGranted=false;
 let smoothed=null;
 const ALPHA=0.35;
-let repCount=0, setsDone=0, phase='up', floorOk=false, lastRepMs=0, livePts=0;
+let repCount=0,setsDone=0,phase='up',floorOk=false,lastRepMs=0,livePts=0;
 const REP_GAP=700;
-let stageIdx=0, targetReps=0;
-let demoVisible=false, stopDemoFn=null, lastDemoFrame=null, lastUserLm=null;
+let stageIdx=0,targetReps=0;
+let demoVisible=false,stopDemoFn=null,lastDemoFrame=null,lastUserLm=null;
 let stopModalDemoFn=null;
-let stagesLoaded=30, renameTargetId=null;
-let chalPushups=0, chalSquats=0, chalSitups=0, chalPhase='pushup';
-let allUsers=[];
-
+let stagesLoaded=30,renameTargetId=null;
+let chalPushups=0,chalSquats=0,chalSitups=0,chalPhase='pushup';
+ 
 // ══════════════════════════════════
-// LOCAL STORAGE (offline backup)
+// STORAGE — local first, Supabase sync
 // ══════════════════════════════════
-function saveLocal(){try{if(cu)localStorage.setItem('fq10_user',JSON.stringify(cu));}catch(e){}}
-function loadLocalUser(){try{const d=localStorage.getItem('fq10_user');return d?JSON.parse(d):null;}catch(e){return null;}}
-function saveSess(id){try{localStorage.setItem('fq10s',id);}catch(e){}}
-function loadSess(){try{return localStorage.getItem('fq10s');}catch(e){return null;}}
-
+function saveLocal(){try{localStorage.setItem('fq_v10',JSON.stringify(users));}catch(e){}}
+function loadLocal(){try{const d=localStorage.getItem('fq_v10');if(d)users=JSON.parse(d);}catch(e){}}
+function saveSess(id){try{localStorage.setItem('fq_v10s',id);}catch(e){}}
+function loadSess(){try{return localStorage.getItem('fq_v10s');}catch(e){return null;}}
+ 
+// Sync user to Supabase
+async function syncUser(u){
+  if(!SB_OK) return;
+  const data={id:u.id,name:u.name,pass:u.pass,lang:u.lang||'he',country:u.country||'IL',cs:u.cs||0,cur_stage:u.curStage||0,streak:u.streak||0,last_day:u.lastDay||'',challenge_pr:u.challengePr||0,group_id:u.groupId||''};
+  // Upsert
+  await sbReq('users?on_conflict=id','POST',{...data});
+}
+ 
+// Load all users from Supabase for ranking
+async function loadAllUsersFromSB(){
+  if(!SB_OK) return;
+  try{
+    const rows=await sbReq('users?select=id,name,cs,cur_stage,streak,country,challenge_pr,group_id&order=cs.desc');
+    if(!rows) return;
+    // Merge into local users (keep passwords local only)
+    rows.forEach(r=>{
+      if(!users[r.id]){
+        // User from another device — add to local cache for ranking
+        users[r.id]={id:r.id,name:r.name,cs:r.cs||0,curStage:r.cur_stage||0,streak:r.streak||0,country:r.country||'IL',challengePr:r.challenge_pr||0,groupId:r.group_id||'',_remote:true};
+      } else {
+        // Update progress from server
+        users[r.id].cs=r.cs||0;
+        users[r.id].streak=r.streak||0;
+        users[r.id].challengePr=r.challenge_pr||0;
+        users[r.id].curStage=r.cur_stage||0;
+      }
+    });
+  }catch(e){}
+}
+ 
 function todayStr(){return new Date().toISOString().slice(0,10);}
-function updStreak(u){const today=todayStr(),yest=new Date(Date.now()-864e5).toISOString().slice(0,10);if(u.last_day===today)return;u.streak=u.last_day===yest?(u.streak||0)+1:1;u.last_day=today;}
+function updStreak(u){const today=todayStr(),yest=new Date(Date.now()-864e5).toISOString().slice(0,10);if(u.lastDay===today)return;u.streak=u.lastDay===yest?(u.streak||0)+1:1;u.lastDay=today;}
 function initials(n){return(n||'?').split(' ').map(w=>w[0]).join('').toUpperCase().slice(0,2);}
 function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('on');clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove('on'),2500);}
 function isAdmin(){return cu&&cu.name===ADMIN;}
 function isTom(){return cu&&cu.name===TOM;}
-function allPl(){return [...allUsers].sort((a,b)=>(b.cs||0)-(a.cs||0));}
+function allPl(){return Object.values(users).sort((a,b)=>(b.cs||0)-(a.cs||0));}
 function natPl(){return allPl().filter(p=>p.country===cu.country);}
 function wRank(){return allPl().findIndex(p=>p.id===cu.id)+1;}
 function nRank(){return natPl().findIndex(p=>p.id===cu.id)+1;}
-
-// ══════════════════════════════════
-// USER DB OPERATIONS
-// ══════════════════════════════════
-async function fetchAllUsers(){
-  if(SB_OK){
-    const r=await sbGet('users','order=cs.desc');
-    if(r) allUsers=r;
-  }
-}
-
-async function findUserByName(name){
-  if(SB_OK){
-    const r=await sbGet('users','name=eq.'+encodeURIComponent(name));
-    if(r&&r[0]) return r[0];
-  }
-  return null;
-}
-
-async function createUserDB(u){
-  if(SB_OK){
-    const r=await sbPost('users',{id:u.id,name:u.name,pass:u.pass,lang:u.lang,country:u.country,cs:0,cur_stage:0,streak:0,last_day:'',challenge_pr:0,group_id:''});
-    if(r&&r[0]){allUsers.push(r[0]);return r[0];}
-  }
-  allUsers.push(u);
-  return u;
-}
-
-async function updateUserDB(u){
-  saveLocal();
-  if(SB_OK){
-    await sbPatch('users','id=eq.'+u.id,{cs:u.cs||0,cur_stage:u.cur_stage||u.curStage||0,streak:u.streak||0,last_day:u.last_day||u.lastDay||'',challenge_pr:u.challenge_pr||u.challengePr||0,name:u.name,lang:u.lang,country:u.country,group_id:u.group_id||u.groupId||''});
-    // Update local cache
-    const idx=allUsers.findIndex(x=>x.id===u.id);
-    if(idx>=0) allUsers[idx]={...allUsers[idx],...u};
-  }
-}
-
+ 
 // ══════════════════════════════════
 // AUTH
 // ══════════════════════════════════
@@ -797,23 +687,42 @@ function authTab(t){
   document.getElementById('auth-in').style.display=t==='in'?'block':'none';
   document.getElementById('auth-up').style.display=t==='up'?'block':'none';
 }
-
+ 
 async function doLogin(){
   const name=document.getElementById('li-name').value.trim();
   const pass=document.getElementById('li-pass').value;
   if(!name||!pass){toast('מלא שם וסיסמה');return;}
-  const btn=document.getElementById('login-btn');
-  btn.textContent='מתחבר...';btn.disabled=true;
-  let user=await findUserByName(name);
+  const btn=document.getElementById('login-btn');btn.textContent='מתחבר...';btn.disabled=true;
+ 
+  // Try Supabase first
+  let user=null;
+  if(SB_OK){
+    const rows=await sbReq('users?name=eq.'+encodeURIComponent(name)+'&select=*');
+    if(rows&&rows[0]){
+      user=rows[0];
+      // Normalize field names
+      user.curStage=user.cur_stage||0;
+      user.lastDay=user.last_day||'';
+      user.challengePr=user.challenge_pr||0;
+      user.groupId=user.group_id||'';
+      // Cache locally
+      users[user.id]=user;saveLocal();
+    }
+  }
+ 
+  // Fallback to local
+  if(!user){
+    user=Object.values(users).find(u=>u.name.toLowerCase()===name.toLowerCase()&&!u._remote);
+  }
+ 
   btn.textContent='כניסה';btn.disabled=false;
   if(!user){toast('שם משתמש לא קיים');return;}
   if(user.pass!==pass){toast('סיסמה שגויה');return;}
-  cu=user;cu.curStage=cu.cur_stage||0;cu.cs=cu.cs||0;cu.streak=cu.streak||0;cu.last_day=cu.last_day||'';cu.challengePr=cu.challenge_pr||0;cu.groupId=cu.group_id||'';
-  saveSess(cu.id);saveLocal();
-  await fetchAllUsers();
+  cu=user;saveSess(cu.id);
+  await loadAllUsersFromSB();
   enterApp();
 }
-
+ 
 async function doSignup(){
   const name=document.getElementById('su-name').value.trim();
   const pass=document.getElementById('su-pass').value;
@@ -821,30 +730,42 @@ async function doSignup(){
   const country=document.getElementById('su-country').value;
   if(!name||!pass||!lang||!country){toast('מלא את כל השדות');return;}
   if(pass.length<4){toast('סיסמה לפחות 4 תווים');return;}
-  const existing=await findUserByName(name);
-  if(existing){toast('השם "'+name+'" תפוס — בחר שם אחר');return;}
+ 
+  // Check if name exists locally
+  const existLocal=Object.values(users).find(u=>u.name.toLowerCase()===name.toLowerCase());
+  if(existLocal&&!existLocal._remote){toast('השם "'+name+'" תפוס — בחר שם אחר');return;}
+ 
+  // Check Supabase
+  if(SB_OK){
+    const rows=await sbReq('users?name=eq.'+encodeURIComponent(name)+'&select=id');
+    if(rows&&rows.length>0){toast('השם "'+name+'" תפוס — בחר שם אחר');return;}
+  }
+ 
   const id='u'+Date.now()+'_'+Math.random().toString(36).slice(2,6);
-  const newUser={id,name,pass,lang,country,cs:0,cur_stage:0,streak:0,last_day:'',challenge_pr:0,group_id:''};
-  cu=await createUserDB(newUser);
-  cu.curStage=0;cu.challengePr=0;cu.groupId='';cu.last_day='';
-  saveSess(cu.id);saveLocal();
-  await fetchAllUsers();
+  const newUser={id,name,pass,lang,country,cs:0,curStage:0,streak:0,lastDay:'',challengePr:0,groupId:''};
+  users[id]=newUser;saveLocal();
+ 
+  // Sync to Supabase
+  if(SB_OK) await syncUser(newUser);
+ 
+  cu=newUser;saveSess(cu.id);
+  await loadAllUsersFromSB();
   enterApp();
 }
-
+ 
 function doLogout(){
   cu=null;stopCamera();if(stopDemoFn){stopDemoFn();stopDemoFn=null;}
-  try{localStorage.removeItem('fq10s');localStorage.removeItem('fq10_user');}catch(e){}
+  try{localStorage.removeItem('fq_v10s');}catch(e){}
   document.getElementById('app').classList.remove('on');
   document.getElementById('auth-scr').classList.remove('hide');
 }
-
+ 
 function enterApp(){
   document.getElementById('auth-scr').classList.add('hide');
   document.getElementById('app').classList.add('on');
   goto('home');
 }
-
+ 
 // ══════════════════════════════════
 // NAVIGATION
 // ══════════════════════════════════
@@ -855,70 +776,67 @@ function goto(tab){
   document.getElementById('sidebar').classList.toggle('show',tab==='rank');
   document.querySelectorAll('.pg').forEach(p=>p.classList.remove('on'));
   const el=document.getElementById('pg-'+tab.replace('_','-'))||document.getElementById('pg-rank');
-  if(el) el.classList.add('on');
+  if(el)el.classList.add('on');
   document.querySelectorAll('.nb').forEach(b=>{
-    const on=b.dataset.tab===tab;
-    b.classList.toggle('on',on);
+    const on=b.dataset.tab===tab;b.classList.toggle('on',on);
     const lbl=b.querySelector('.nb-lbl');if(lbl)lbl.style.color=on?'var(--g)':'';
     b.querySelectorAll('path,rect,circle').forEach(s=>{if(s.getAttribute('stroke'))s.setAttribute('stroke',on?'var(--g)':'var(--t3)');});
   });
-  if(tab==='home') rHome();
-  else if(tab==='workout') iWorkout();
-  else if(tab==='rank') sideNav(curSideNav||'world');
-  else if(tab==='profile') rProfile();
-  else if(tab==='group') rGroup();
-  else if(tab==='settings') rSettings();
-  else if(tab==='challenge_workout') startChallenge();
+  if(tab==='home')rHome();
+  else if(tab==='workout')iWorkout();
+  else if(tab==='rank')sideNav(curSideNav||'world');
+  else if(tab==='profile')rProfile();
+  else if(tab==='group')rGroup();
+  else if(tab==='settings')rSettings();
+  else if(tab==='challenge_workout')startChallenge();
 }
-
+ 
 // ══════════════════════════════════
-// SIDEBAR / RANK
+// SIDEBAR
 // ══════════════════════════════════
 function sideNav(mode){
   curSideNav=mode;
   ['world','nat','challenge','stages','snake'].forEach(m=>{const el=document.getElementById('sb-'+m);if(el)el.classList.toggle('on',m===mode);});
   const titles={world:'דירוג עולמי',nat:'דירוג ארצי',challenge:'אתגר מקסימום',stages:'שלבים',snake:'מסלול'};
   document.getElementById('rank-page-title').textContent=titles[mode]||'דירוג';
-  if(mode==='world') renderLB(allPl());
-  else if(mode==='nat') renderLB(natPl());
-  else if(mode==='challenge') renderChallengeLB();
-  else if(mode==='stages') renderStages();
-  else if(mode==='snake') renderSnake();
+  if(mode==='world')renderLB(allPl());
+  else if(mode==='nat')renderLB(natPl());
+  else if(mode==='challenge')renderChallengeLB();
+  else if(mode==='stages')renderStages();
+  else if(mode==='snake')renderSnake();
 }
-
+ 
 function renderLB(players){
   const search=(document.getElementById('lb-search')?.value||'').toLowerCase();
   const filtered=search?players.filter(p=>p.name.toLowerCase().includes(search)):players;
   let html=`<div style="margin-bottom:10px"><input id="lb-search" class="inp" style="margin:0" placeholder="🔍 חיפוש שחקן..." oninput="sideNav(curSideNav)" value="${search}"></div>`;
   if(!filtered.length){html+='<div class="card"><div style="font-size:13px;color:var(--t3)">אין תוצאות</div></div>';}
-  else{
-    html+='<div class="card">'+filtered.map((p,i)=>{
-      const gr=allPl().findIndex(u=>u.id===p.id)+1;
-      const isMe=p.id===cu.id,medal=gr===1?'🥇':gr===2?'🥈':gr===3?'🥉':'';
-      return `<div class="lbrow ${isMe?'me':''}"><div style="font-size:13px;font-weight:800;width:24px;color:${gr<=3?'var(--g)':'var(--t2)'}">${medal||gr}</div><div class="av" style="width:30px;height:30px;font-size:11px">${initials(p.name)}</div><div style="flex:1;font-size:13px;font-weight:${isMe?800:400}">${p.name}${isMe?' ★':''}</div><div style="font-size:12px;color:var(--t2)">שלב ${(p.cs||0)+1}</div></div>`;
-    }).join('')+'</div>';
-  }
+  else html+='<div class="card">'+filtered.map((p,i)=>{
+    const gr=allPl().findIndex(u=>u.id===p.id)+1;
+    const isMe=p.id===cu.id,medal=gr===1?'🥇':gr===2?'🥈':gr===3?'🥉':'';
+    return `<div class="lbrow ${isMe?'me':''}"><div style="font-size:13px;font-weight:800;width:24px;color:${gr<=3?'var(--g)':'var(--t2)'}">${medal||gr}</div><div class="av" style="width:30px;height:30px;font-size:11px">${initials(p.name)}</div><div style="flex:1;font-size:13px;font-weight:${isMe?800:400}">${p.name}${isMe?' ★':''}</div><div style="font-size:12px;color:var(--t2)">שלב ${(p.cs||0)+1}</div></div>`;
+  }).join('')+'</div>';
   document.getElementById('rank-content').innerHTML=html;
 }
-
+ 
 function renderChallengeLB(){
-  const chalUsers=allPl().filter(u=>(u.challenge_pr||u.challengePr||0)>0||u.id===cu.id).sort((a,b)=>(b.challenge_pr||b.challengePr||0)-(a.challenge_pr||a.challengePr||0));
-  const myPR=cu.challenge_pr||cu.challengePr||0;
+  const pl=allPl().filter(u=>(u.challengePr||0)>0||u.id===cu.id).sort((a,b)=>(b.challengePr||0)-(a.challengePr||0));
+  const myPR=cu.challengePr||0;
   let html=`<div class="card" style="margin-bottom:10px;background:var(--gdim2);border-color:var(--g)">
     <div style="font-size:13px;font-weight:700;color:var(--g);margin-bottom:6px">🏆 האתגר שלי</div>
-    <div style="font-size:12px;color:var(--t2);margin-bottom:10px">עשה כמה שאפשר מכל תרגיל ברצף. הסיבוב השלם (כל 3 הושלמו) — זה השיא.</div>
+    <div style="font-size:12px;color:var(--t2);margin-bottom:10px">עשה כמה שאפשר מכל תרגיל ברצף. הסיבוב השלם — זה השיא.</div>
     <div style="font-size:32px;font-weight:800;color:var(--g);text-align:center;margin-bottom:10px">${myPR}</div>
     <button class="btn pri" onclick="goto('challenge_workout')">התחל אתגר חדש 💪</button>
   </div>
-  <div class="card"><div style="font-size:13px;font-weight:700;color:var(--g);margin-bottom:10px">לוח שיאים עולמי</div>`;
-  if(!chalUsers.length){html+='<div style="font-size:13px;color:var(--t3)">אין שיאים עדיין</div>';}
-  else html+=chalUsers.map((p,i)=>{const isMe=p.id===cu.id,pr=p.challenge_pr||p.challengePr||0;const medal=i===0?'🥇':i===1?'🥈':i===2?'🥉':'';return `<div class="lbrow ${isMe?'me':''}"><div style="font-size:13px;font-weight:800;width:24px;color:${i<3?'var(--g)':'var(--t2)'}">${medal||i+1}</div><div class="av" style="width:30px;height:30px;font-size:11px">${initials(p.name)}</div><div style="flex:1;font-size:13px;font-weight:${isMe?800:400}">${p.name}${isMe?' ★':''}</div><div style="font-size:13px;font-weight:700;color:var(--g)">${pr}</div></div>`;}).join('');
+  <div class="card"><div style="font-size:13px;font-weight:700;color:var(--g);margin-bottom:10px">לוח שיאים</div>`;
+  if(!pl.length){html+='<div style="font-size:13px;color:var(--t3)">אין שיאים עדיין</div>';}
+  else html+=pl.map((p,i)=>{const isMe=p.id===cu.id,medal=i===0?'🥇':i===1?'🥈':i===2?'🥉':'';return `<div class="lbrow ${isMe?'me':''}"><div style="font-size:13px;font-weight:800;width:24px;color:${i<3?'var(--g)':'var(--t2)'}">${medal||i+1}</div><div class="av" style="width:30px;height:30px;font-size:11px">${initials(p.name)}</div><div style="flex:1;font-size:13px;font-weight:${isMe?800:400}">${p.name}${isMe?' ★':''}</div><div style="font-size:13px;font-weight:700;color:var(--g)">${p.challengePr||0}</div></div>`;}).join('');
   html+='</div>';
   document.getElementById('rank-content').innerHTML=html;
 }
-
+ 
 function renderStages(){
-  const cs=isTom()?TOTAL:(cu.cs||0), curS=isTom()?0:(cu.cur_stage||cu.curStage||0);
+  const cs=isTom()?TOTAL:(cu.cs||0),curS=isTom()?0:(cu.curStage||0);
   let html='<div style="font-size:12px;color:var(--t2);margin-bottom:10px">1000 שלבים</div>';
   for(let i=0;i<stagesLoaded&&i<TOTAL;i++){
     const n=i+1,s=getStage(n);
@@ -929,13 +847,13 @@ function renderStages(){
     const click=locked?'':` onclick="beginStage(${i})"`;
     html+=`<div class="sr ${locked?'lck':done?'dn':active?'act':''}"${click}><div class="snum" style="background:${bg};color:${fg}">${done?'✓':n}</div><div style="flex:1"><div style="font-size:13px;font-weight:800">${s.name}</div><div style="font-size:10px;color:var(--t3)">× ${s.sets} סטים</div>${exHtml}</div><div>${badge}</div></div>`;
   }
-  if(stagesLoaded<TOTAL) html+=`<button class="btn sec" onclick="stagesLoaded+=30;renderStages()" style="margin-top:4px">טען עוד</button>`;
+  if(stagesLoaded<TOTAL)html+=`<button class="btn sec" onclick="stagesLoaded+=30;renderStages()" style="margin-top:4px">טען עוד</button>`;
   document.getElementById('rank-content').innerHTML=html;
 }
-
+ 
 function renderSnake(){
   const snakeTotal=Math.min(100,TOTAL),cols=5,rows=Math.ceil(snakeTotal/cols);
-  const cs=cu.cs||0,cur=cu.cur_stage||cu.curStage||0;
+  const cs=cu.cs||0,cur=cu.curStage||0;
   let html='<div class="card"><div style="font-size:12px;font-weight:700;color:var(--g);margin-bottom:10px">מסלול</div><div class="snake-wrap">';
   for(let r=0;r<rows;r++){
     const base=r*cols,goLeft=r%2===1,rowS=[];
@@ -944,7 +862,7 @@ function renderSnake(){
     rowS.forEach((idx,ci)=>{
       const sn=idx+1,isMe=sn===cur+1,isDone=sn<=cs;
       html+=`<div class="snakenode ${isDone?'dn':isMe?'cur':''} ${isMe?'me':''}">${sn}${isMe?'★':''}</div>`;
-      if(ci<rowS.length-1) html+=`<div class="snakeline"></div>`;
+      if(ci<rowS.length-1)html+=`<div class="snakeline"></div>`;
     });
     html+='</div>';
     if(r<rows-1){const right=r%2===0;html+=`<div style="display:flex;justify-content:${right?'flex-end':'flex-start'}"><div style="width:34px;height:10px;border-${right?'right':'left'}:2px solid var(--bg4)"></div></div>`;}
@@ -952,47 +870,43 @@ function renderSnake(){
   html+='</div></div>';
   document.getElementById('rank-content').innerHTML=html;
 }
-
-function beginStage(i){cu.cur_stage=i;cu.curStage=i;saveLocal();goto('workout');}
-
+ 
+function beginStage(i){cu.curStage=i;saveLocal();goto('workout');}
+ 
 // ══════════════════════════════════
 // HOME
 // ══════════════════════════════════
 function rHome(){
-  if(!cu) return;
+  if(!cu)return;
   document.getElementById('hav').textContent=initials(cu.name);
   document.getElementById('hname').textContent=cu.name;
   document.getElementById('admin-badge-home').style.display=isAdmin()?'inline':'none';
   document.getElementById('h-stages').textContent=cu.cs||0;
   document.getElementById('h-streak').textContent=cu.streak||0;
-  const total=allUsers.length,rank=wRank();
+  const pl=allPl(),rank=wRank(),total=pl.length;
   document.getElementById('h-rank').textContent='#'+rank;
   document.getElementById('h-rankof').textContent=total>1?'מתוך '+total:' ';
   document.getElementById('h-xbar').style.width=(total>1?Math.round(((total-rank)/Math.max(1,total-1))*100):100)+'%';
-  const stageNum=(cu.cur_stage||cu.curStage||0)+1;
-  const s=getStage(stageNum);
+  const s=getStage((cu.curStage||0)+1);
   document.getElementById('h-stage-title').textContent=s.name;
   document.getElementById('h-stage-desc').textContent=s.exs.map(e=>e.n+'× '+e.e).join('\n')+'\n× '+s.sets+' סטים';
 }
-
+ 
 // ══════════════════════════════════
 // EX INFO MODAL
 // ══════════════════════════════════
 function showEx(name){
-  const ex=EX[name];if(!ex) return;
+  const ex=EX[name];if(!ex)return;
   document.getElementById('modal-title').textContent=name;
   document.getElementById('modal-tags').innerHTML=`<span class="pill pg2">${ex.m}</span><span class="pill pt">${'★'.repeat(ex.d)}${'☆'.repeat(5-ex.d)}</span>`;
   document.getElementById('modal-steps').innerHTML=ex.steps.split('\n').map(l=>`<div>${l}</div>`).join('');
   document.getElementById('modal-errors').innerHTML=ex.errors.split('\n').map(l=>`<div>${l}</div>`).join('');
   document.getElementById('modal-bg').classList.add('on');
   if(stopModalDemoFn){stopModalDemoFn();stopModalDemoFn=null;}
-  setTimeout(()=>{
-    const cvs=document.getElementById('modal-demo-cvs');
-    stopModalDemoFn=startHumanAnim(cvs,getDemoType(name),'#00e676');
-  },60);
+  setTimeout(()=>{stopModalDemoFn=startAnim(document.getElementById('modal-demo-cvs'),getDT(name),'#00e676');},60);
 }
 function closeModal(){document.getElementById('modal-bg').classList.remove('on');if(stopModalDemoFn){stopModalDemoFn();stopModalDemoFn=null;}}
-
+ 
 // ══════════════════════════════════
 // PROFILE
 // ══════════════════════════════════
@@ -1005,56 +919,52 @@ function rProfile(){
   document.getElementById('p-streak').textContent=cu.streak||0;
   document.getElementById('achievements').innerHTML=ACHV.map(a=>{const ok=a.need(cu);return `<div style="display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:.5px solid var(--bdr2);opacity:${ok?1:0.28}"><div style="width:34px;height:34px;border-radius:50%;background:${ok?a.bg:'var(--bg3)'};display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0">${a.icon}</div><div style="flex:1"><div style="font-size:13px;font-weight:700">${a.label}</div><div style="font-size:11px;color:var(--t2)">${a.desc}</div></div>${ok?'<span class="pill pg2">פתוח</span>':''}</div>`;}).join('');
 }
-
+ 
 function shareProfile(){
-  const text=`*FitQuest* 💪\n\n${cu.name} מזמין אותך!\n🏆 שלב ${(cu.cs||0)+1} | דירוג #${wRank()}\n🔥 ${cu.streak||0} ימי רצף\n\nהורד את האפליקציה:\n${location.href}`;
+  const text=`*FitQuest* 💪\n\n${cu.name} מזמין אותך!\n🏆 שלב ${(cu.cs||0)+1} | דירוג #${wRank()}\n🔥 ${cu.streak||0} ימי רצף\n\n👉 https://tomyitzhaki2-netizen.github.io/fitquest-app/`;
   window.open('https://wa.me/?text='+encodeURIComponent(text),'_blank');
 }
-
+ 
 // ══════════════════════════════════
-// GROUP — uses Supabase group_id field
-// Group data stored in Supabase users.group_id
-// Group metadata stored in localStorage (synced by code)
+// GROUP — with join code
 // ══════════════════════════════════
-function getGrpMeta(){try{return JSON.parse(localStorage.getItem('fq10grp')||'{}');}catch(e){return {};}}
-function saveGrpMeta(m){try{localStorage.setItem('fq10grp',JSON.stringify(m));}catch(e){}}
-
-function genGrpCode(gid){
-  let h=0;for(const c of gid){h=(h*31+c.charCodeAt(0))>>>0;}
+function getGrpMeta(){try{return JSON.parse(localStorage.getItem('fq_grp')||'{}');}catch(e){return{};}}
+function saveGrpMeta(m){try{localStorage.setItem('fq_grp',JSON.stringify(m));}catch(e){}}
+ 
+function genCode(gid){
+  let h=0;for(const c of gid)h=(h*31+c.charCodeAt(0))>>>0;
   const chars='ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
-  let code='';let n=h;
+  let code='',n=h;
   for(let i=0;i<6;i++){code+=chars[n%chars.length];n=Math.floor(n/chars.length)||1;}
   return code;
 }
-
+ 
 function rGroup(){
   const meta=getGrpMeta();
-  const myGid=cu.group_id||cu.groupId||'';
-  const myGrpMeta=myGid?meta[myGid]:null;
-  // Members = all users with same group_id
-  const members=myGid?allUsers.filter(u=>(u.group_id||u.groupId||'')=== myGid):[];
-  const isOwner=myGrpMeta&&myGrpMeta.owner===cu.id;
+  const myGid=cu.groupId||'';
+  const myMeta=myGid?meta[myGid]:null;
+  const members=myGid?Object.values(users).filter(u=>(u.groupId||'')=== myGid):[];
+  const isOwner=myMeta&&myMeta.owner===cu.id;
   let html='';
-
-  if(myGid&&myGrpMeta){
-    const code=genGrpCode(myGid);
+ 
+  if(myGid&&myMeta){
+    const code=genCode(myGid);
     html+=`<div class="card" style="margin-bottom:10px">
       <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
-        <div style="font-size:32px">${myGrpMeta.emoji||'💪'}</div>
-        <div style="flex:1"><div style="font-size:16px;font-weight:800">${myGrpMeta.name}</div><div style="font-size:12px;color:var(--t2)">${members.length} חברים${isOwner?' · מנהל':''}</div></div>
-      </div>
-      ${members.map(m=>{const isMe=m.id===cu.id;return `<div class="group-member"><div class="av" style="width:30px;height:30px;font-size:11px">${initials(m.name)}</div><div style="flex:1;font-size:13px;font-weight:${isMe?700:400}">${m.name}${isMe?' (אני)':''}</div><div style="font-size:12px;color:var(--t2)">שלב ${(m.cs||0)+1}</div>${isOwner&&!isMe?`<button onclick="kickFromGroup('${m.id}')" style="border:none;background:var(--redbg);color:var(--red);border-radius:8px;padding:3px 8px;cursor:pointer;font-size:11px;font-family:inherit">הוצא</button>`:''}</div>`;}).join('')}
-    </div>`;
+        <div style="font-size:32px">${myMeta.emoji||'💪'}</div>
+        <div style="flex:1"><div style="font-size:16px;font-weight:800">${myMeta.name}</div><div style="font-size:12px;color:var(--t2)">${members.length} חברים${isOwner?' · מנהל':''}</div></div>
+      </div>`;
+    members.forEach(m=>{const isMe=m.id===cu.id;html+=`<div class="group-member"><div class="av" style="width:30px;height:30px;font-size:11px">${initials(m.name)}</div><div style="flex:1;font-size:13px;font-weight:${isMe?700:400}">${m.name}${isMe?' (אני)':''}</div><div style="font-size:12px;color:var(--t2)">שלב ${(m.cs||0)+1}</div>${isOwner&&!isMe?`<button onclick="kickMember('${m.id}')" style="border:none;background:var(--redbg);color:var(--red);border-radius:8px;padding:3px 8px;cursor:pointer;font-size:11px;font-family:inherit">הוצא</button>`:''}</div>`;});
+    html+='</div>';
     html+=`<div class="card" style="margin-bottom:10px">
       <div style="font-size:13px;font-weight:700;color:var(--g);margin-bottom:6px">קוד הזמנה</div>
-      <div style="font-size:12px;color:var(--t2);margin-bottom:4px">שלח קוד זה לחברים — הם יזינו אותו ויצטרפו מיד</div>
+      <div style="font-size:12px;color:var(--t2);margin-bottom:4px">שלח לחברים — הם יכנסו לקבוצה ויזינו קוד זה</div>
       <div class="code-box">${code}</div>
-      <button class="btn sec" onclick="shareGroupCode('${code}','${myGrpMeta.name}','${myGrpMeta.emoji||'💪'}')">שתף בוואצאפ 📲</button>
+      <button class="btn sec" onclick="shareGroupWA('${code}','${myMeta.name}','${myMeta.emoji||'💪'}')">שתף בוואצאפ 📲</button>
     </div>`;
-    if(isOwner){html+=`<button class="btn danger" onclick="deleteGroup('${myGid}')">מחק קבוצה</button>`;}
-    else{html+=`<button class="btn danger" onclick="leaveGroup('${myGid}')">צא מהקבוצה</button>`;}
+    html+=isOwner?`<button class="btn danger" onclick="deleteGroup()">מחק קבוצה</button>`:
+                  `<button class="btn danger" onclick="leaveGroup()">צא מהקבוצה</button>`;
   } else {
-    // No group
     html+=`<div class="card" style="margin-bottom:10px">
       <div style="font-size:13px;font-weight:700;color:var(--g);margin-bottom:12px">צור קבוצה חדשה</div>
       <div style="display:flex;gap:8px;align-items:center;margin-bottom:8px">
@@ -1063,89 +973,69 @@ function rGroup(){
       </div>
       <input type="hidden" id="new-grp-emoji" value="🏃">
       <button class="btn pri" onclick="createGroup()">צור קבוצה</button>
-    </div>`;
-    html+=`<div class="card">
-      <div style="font-size:13px;font-weight:700;color:var(--g);margin-bottom:8px">הצטרף לקבוצה בקוד</div>
-      <input id="join-code-inp" class="inp" placeholder="הכנס קוד 6 תווים" style="text-transform:uppercase;letter-spacing:3px;font-size:18px;font-weight:800">
+    </div>
+    <div class="card">
+      <div style="font-size:13px;font-weight:700;color:var(--g);margin-bottom:8px">הצטרף בקוד</div>
+      <input id="join-code" class="inp" placeholder="קוד 6 תווים" style="text-transform:uppercase;letter-spacing:3px;font-size:18px;font-weight:800">
       <button class="btn sec" onclick="joinByCode()">הצטרף</button>
     </div>`;
   }
   document.getElementById('group-main').innerHTML=html;
 }
-
+ 
 const EMOJIS=['🏃','💪','🏋️','⚽','🏆','🔥','🦁','🐆','🥇','🎯','🌟','⚡'];
 let emojiIdx=0;
 function cycleEmoji(){emojiIdx=(emojiIdx+1)%EMOJIS.length;document.getElementById('grp-emoji-pick').textContent=EMOJIS[emojiIdx];document.getElementById('new-grp-emoji').value=EMOJIS[emojiIdx];}
-
-async function createGroup(){
+ 
+function createGroup(){
   const name=document.getElementById('new-grp-name').value.trim();
   const emoji=document.getElementById('new-grp-emoji').value;
   if(!name){toast('הכנס שם לקבוצה');return;}
   const gid='g'+Date.now();
   const meta=getGrpMeta();
-  meta[gid]={name,emoji,owner:cu.id,created:Date.now()};
+  meta[gid]={name,emoji,owner:cu.id};
   saveGrpMeta(meta);
-  cu.group_id=gid;cu.groupId=gid;
-  await updateUserDB(cu);
-  // Refresh users
-  const idx=allUsers.findIndex(u=>u.id===cu.id);
-  if(idx>=0) allUsers[idx].group_id=gid;
-  toast('קבוצה נוצרה! שלח את הקוד לחברים');
-  rGroup();
+  cu.groupId=gid;saveLocal();
+  toast('קבוצה נוצרה! שלח את הקוד לחברים');rGroup();
 }
-
-async function joinByCode(){
-  const inp=document.getElementById('join-code-inp');
-  const code=inp?.value?.trim()?.toUpperCase();
-  if(!code||code.length!==6){toast('הכנס קוד תקין (6 תווים)');return;}
-  // Find group by code
+ 
+function joinByCode(){
+  const code=(document.getElementById('join-code')?.value||'').trim().toUpperCase();
+  if(code.length!==6){toast('קוד לא תקין (6 תווים)');return;}
   const meta=getGrpMeta();
-  const gid=Object.keys(meta).find(id=>genGrpCode(id)===code);
-  if(!gid){toast('קוד לא נמצא — בקש מהחבר שישלח מחדש');return;}
-  cu.group_id=gid;cu.groupId=gid;
-  await updateUserDB(cu);
-  const idx=allUsers.findIndex(u=>u.id===cu.id);
-  if(idx>=0) allUsers[idx].group_id=gid;
-  await fetchAllUsers(); // refresh to see new member
-  toast('הצטרפת לקבוצה '+meta[gid].name+'! 🎉');
-  rGroup();
+  const gid=Object.keys(meta).find(id=>genCode(id)===code);
+  if(!gid){toast('קוד לא נמצא — בקש מהחבר לשלוח קוד מחדש');return;}
+  cu.groupId=gid;saveLocal();
+  // Sync to SB
+  if(SB_OK) sbReq('users?id=eq.'+cu.id,'PATCH',{group_id:gid});
+  toast('הצטרפת לקבוצה '+meta[gid].name+'! 🎉');rGroup();
 }
-
-function shareGroupCode(code,name,emoji){
-  const text=`*הצטרף לקבוצה "${emoji} ${name}" ב-FitQuest!* 💪\n\n1. פתח FitQuest\n2. לחץ על "קבוצה"\n3. לחץ "הצטרף לקבוצה בקוד"\n4. הכנס קוד: *${code}*\n\n${location.href}`;
+ 
+function shareGroupWA(code,name,emoji){
+  const text=`*הצטרף לקבוצה "${emoji} ${name}" ב-FitQuest!* 💪\n\n1. פתח FitQuest\n2. לחץ "קבוצה" → "הצטרף בקוד"\n3. הכנס קוד: *${code}*\n\nhttps://tomyitzhaki2-netizen.github.io/fitquest-app/`;
   window.open('https://wa.me/?text='+encodeURIComponent(text),'_blank');
 }
-
-async function kickFromGroup(uid){
-  const u=allUsers.find(x=>x.id===uid);
-  if(!u) return;
-  u.group_id='';u.groupId='';
-  if(SB_OK) await sbPatch('users','id=eq.'+uid,{group_id:''});
-  await fetchAllUsers();
-  toast('שחקן הוצא מהקבוצה');rGroup();
+ 
+function kickMember(uid){
+  const u=users[uid];if(!u)return;
+  u.groupId='';saveLocal();
+  if(SB_OK) sbReq('users?id=eq.'+uid,'PATCH',{group_id:''});
+  toast('שחקן הוצא');rGroup();
 }
-
-async function leaveGroup(gid){
-  cu.group_id='';cu.groupId='';
-  await updateUserDB(cu);
-  const idx=allUsers.findIndex(u=>u.id===cu.id);
-  if(idx>=0) allUsers[idx].group_id='';
+ 
+function leaveGroup(){
+  cu.groupId='';saveLocal();
+  if(SB_OK) sbReq('users?id=eq.'+cu.id,'PATCH',{group_id:''});
   toast('יצאת מהקבוצה');rGroup();
 }
-
-async function deleteGroup(gid){
-  // Remove all members
-  const members=allUsers.filter(u=>(u.group_id||'')=== gid);
-  for(const m of members){
-    m.group_id='';m.groupId='';
-    if(SB_OK) await sbPatch('users','id=eq.'+m.id,{group_id:''});
-  }
+ 
+function deleteGroup(){
+  const gid=cu.groupId;if(!gid)return;
+  Object.values(users).filter(u=>u.groupId===gid).forEach(u=>{u.groupId='';if(SB_OK)sbReq('users?id=eq.'+u.id,'PATCH',{group_id:''));});
   const meta=getGrpMeta();delete meta[gid];saveGrpMeta(meta);
-  cu.group_id='';cu.groupId='';saveLocal();
-  await fetchAllUsers();
-  toast('קבוצה נמחקה');rGroup();
+  cu.groupId='';saveLocal();toast('קבוצה נמחקה');rGroup();
 }
-
+ 
 // ══════════════════════════════════
 // SETTINGS
 // ══════════════════════════════════
@@ -1156,59 +1046,48 @@ function rSettings(){
     `<button onclick="setLang('${k}')" style="padding:8px 12px;border-radius:9px;border:.5px solid ${activeLang===k?'var(--g)':'var(--bdr)'};background:${activeLang===k?'var(--gdim)':'var(--bg3)'};color:${activeLang===k?'var(--g)':'var(--t2)'};cursor:pointer;font-size:12px;font-weight:${activeLang===k?800:400};font-family:inherit">${v}</button>`
   ).join('');
   document.getElementById('admin-panel').style.display=isAdmin()?'block':'none';
-  if(isAdmin()) renderAdminList();
+  if(isAdmin())renderAdminList();
 }
-
-function setLang(l){
-  cu.lang=l;
-  updateUserDB(cu);
-  rSettings();
-  toast(LANGS[l]+' ✓');
-  // NOTE: we do NOT change document.dir — keep RTL for Hebrew UI
-}
-
-async function saveName(){
+ 
+function setLang(l){cu.lang=l;saveLocal();if(SB_OK)sbReq('users?id=eq.'+cu.id,'PATCH',{lang:l});rSettings();toast(LANGS[l]+' ✓');}
+ 
+function saveName(){
   const n=document.getElementById('set-name').value.trim();
   if(!n){toast('הכנס שם');return;}
-  if(n.toLowerCase()!==cu.name.toLowerCase()){
-    const ex=await findUserByName(n);
-    if(ex){toast('השם "'+n+'" תפוס');return;}
-  }
-  cu.name=n;await updateUserDB(cu);toast('שם עודכן!');
+  if(n.toLowerCase()!==cu.name.toLowerCase()&&Object.values(users).find(u=>u.name.toLowerCase()===n.toLowerCase())){toast('השם "'+n+'" תפוס');return;}
+  cu.name=n;saveLocal();if(SB_OK)sbReq('users?id=eq.'+cu.id,'PATCH',{name:n});toast('שם עודכן!');
 }
-
+ 
 function renderAdminList(){
   const search=(document.getElementById('admin-search')?.value||'').toLowerCase();
-  const filtered=allUsers.filter(u=>u.id!==cu.id&&u.name.toLowerCase().includes(search));
+  const filtered=Object.values(users).filter(u=>u.id!==cu.id&&!u._remote&&u.name.toLowerCase().includes(search));
   document.getElementById('admin-list').innerHTML=filtered.length===0
     ?'<div style="font-size:12px;color:var(--t3);padding:8px">אין תוצאות</div>'
     :filtered.map(u=>`<div style="display:flex;align-items:center;gap:8px;padding:8px 0;border-bottom:.5px solid var(--bdr2)">
       <div class="av" style="width:28px;height:28px;font-size:10px">${initials(u.name)}</div>
-      <div style="flex:1"><div style="font-size:13px;font-weight:600">${u.name}</div><div style="font-size:11px;color:var(--t2)">שלב ${(u.cs||0)+1} · ${CNAMES[u.country]||u.country||'—'}</div></div>
+      <div style="flex:1"><div style="font-size:13px;font-weight:600">${u.name}</div><div style="font-size:11px;color:var(--t2)">שלב ${(u.cs||0)+1} · ${CNAMES[u.country]||'—'}</div></div>
       <button onclick="openRename('${u.id}','${u.name.replace(/'/g,"\\'")}')" style="border:none;background:var(--gdim);color:var(--g);border-radius:8px;padding:4px 9px;cursor:pointer;font-size:11px;font-weight:700;font-family:inherit">✏ שם</button>
     </div>`).join('');
 }
-
-function openRename(uid,currentName){renameTargetId=uid;document.getElementById('rename-current').textContent=currentName;document.getElementById('rename-inp').value='';document.getElementById('rename-modal').classList.add('on');setTimeout(()=>document.getElementById('rename-inp').focus(),100);}
+ 
+function openRename(uid,cur){renameTargetId=uid;document.getElementById('rename-current').textContent=cur;document.getElementById('rename-inp').value='';document.getElementById('rename-modal').classList.add('on');setTimeout(()=>document.getElementById('rename-inp').focus(),100);}
 function closeRenameModal(){document.getElementById('rename-modal').classList.remove('on');renameTargetId=null;}
-async function doRename(){
-  if(!renameTargetId) return;
+function doRename(){
+  if(!renameTargetId)return;
   const newName=document.getElementById('rename-inp').value.trim();
   if(!newName){toast('הכנס שם');return;}
-  const ex=await findUserByName(newName);
-  if(ex&&ex.id!==renameTargetId){toast('השם "'+newName+'" תפוס');return;}
-  const old=allUsers.find(u=>u.id===renameTargetId);
-  if(old){old.name=newName;}
-  if(SB_OK) await sbPatch('users','id=eq.'+renameTargetId,{name:newName});
-  toast('שם עודכן'+(old?' מ-'+old.name:''));
-  closeRenameModal();renderAdminList();
+  if(Object.values(users).find(u=>u.name.toLowerCase()===newName.toLowerCase()&&u.id!==renameTargetId)){toast('השם "'+newName+'" תפוס');return;}
+  const old=users[renameTargetId]?.name||'';
+  if(users[renameTargetId])users[renameTargetId].name=newName;
+  saveLocal();if(SB_OK)sbReq('users?id=eq.'+renameTargetId,'PATCH',{name:newName});
+  toast('שם עודכן: '+old+' → '+newName);closeRenameModal();renderAdminList();
 }
-
+ 
 // ══════════════════════════════════
 // WORKOUT
 // ══════════════════════════════════
 function iWorkout(){
-  stageIdx=cu.cur_stage||cu.curStage||0;
+  stageIdx=cu.curStage||0;
   const s=getStage(stageIdx+1);
   repCount=0;setsDone=0;phase='up';floorOk=false;lastRepMs=0;livePts=0;
   targetReps=s.exs[0].n;
@@ -1229,7 +1108,7 @@ function iWorkout(){
   setFb('מאתחל מצלמה...','');
   initCam();
 }
-
+ 
 function toggleDemo(){
   demoVisible=!demoVisible;
   document.getElementById('demo-section').style.display=demoVisible?'block':'none';
@@ -1237,33 +1116,30 @@ function toggleDemo(){
   if(demoVisible){
     const s=getStage(stageIdx+1);
     if(stopDemoFn){stopDemoFn();stopDemoFn=null;}
-    setTimeout(()=>{
-      const cvs=document.getElementById('demo-cvs');
-      stopDemoFn=startHumanAnim(cvs,getDemoType(s.exs[0].e),'#00e676',frame=>{lastDemoFrame=frame;});
-    },60);
+    setTimeout(()=>{stopDemoFn=startAnim(document.getElementById('demo-cvs'),getDT(s.exs[0].e),'#00e676',f=>{lastDemoFrame=f;});},60);
   } else {if(stopDemoFn){stopDemoFn();stopDemoFn=null;}}
 }
-
+ 
 function countRep(isChallenge=false){
   const now=Date.now();
-  if(now-lastRepMs<REP_GAP) return;
-  if(livePts<3){setFb('⚠ תנועה לא הושלמה — נסה שוב','bad');return;}
+  if(now-lastRepMs<REP_GAP)return;
+  if(livePts<3){setFb('⚠ תנועה לא הושלמה','bad');return;}
   lastRepMs=now;livePts=0;
-
+ 
   if(isChallenge){
-    if(chalPhase==='pushup') chalPushups++;
-    else if(chalPhase==='squat') chalSquats++;
-    else if(chalPhase==='situp') chalSitups++;
+    if(chalPhase==='pushup')chalPushups++;
+    else if(chalPhase==='squat')chalSquats++;
+    else if(chalPhase==='situp')chalSitups++;
     document.getElementById('c-pushups').textContent=chalPushups;
     document.getElementById('c-squats').textContent=chalSquats;
     document.getElementById('c-situps').textContent=chalSitups;
     const rounds=Math.min(chalPushups,chalSquats,chalSitups);
     document.getElementById('chal-rounds').textContent=rounds;
     document.getElementById('chal-round-pill').textContent='סיבוב '+(rounds+1);
-    // Highlight active exercise box
-    ['push','squat','situp'].forEach(k=>{const el=document.getElementById('cc-'+k+'-box');if(el)el.style.border='.5px solid '+(k===chalPhase?'var(--g)':'var(--bdr)');});
-    const curCount=chalPhase==='pushup'?chalPushups:chalPhase==='squat'?chalSquats:chalSitups;
-    if(curCount>rounds){
+    // Highlight active
+    ['push','squat','situp'].forEach(k=>{const el=document.getElementById('cc-'+k+'-box');if(el)el.style.borderColor=k===chalPhase?'var(--g)':'var(--bdr)';});
+    const cur=chalPhase==='pushup'?chalPushups:chalPhase==='squat'?chalSquats:chalSitups;
+    if(cur>rounds){
       if(chalPhase==='pushup'){chalPhase='squat';setFb2('עכשיו סקוואטים! 🦵','');}
       else if(chalPhase==='squat'){chalPhase='situp';setFb2('עכשיו כפיפות בטן! 💪','');}
       else{chalPhase='pushup';setFb2('עכשיו שכיבות סמיכה! 💪','');}
@@ -1271,7 +1147,7 @@ function countRep(isChallenge=false){
     }
     return;
   }
-
+ 
   repCount++;
   document.getElementById('wo-reps').textContent=repCount;
   setFb('✓ '+repCount+'/'+targetReps,'');
@@ -1282,23 +1158,25 @@ function countRep(isChallenge=false){
     document.getElementById('wo-reps').textContent='0';
     document.getElementById('wo-bar').style.width=Math.round((setsDone/s.sets)*100)+'%';
     document.getElementById('wo-setlbl').textContent='סט '+(setsDone<s.sets?setsDone+1:setsDone);
-    if(setsDone>=s.sets) completeStage();
+    if(setsDone>=s.sets)completeStage();
     else{setFb('🎉 סט '+setsDone+' הושלם!','');phase='up';floorOk=false;}
   }
 }
-
+ 
 async function completeStage(){
   updStreak(cu);
-  cu.cs=Math.max(cu.cs||0, stageIdx+1);
-  if((cu.cur_stage||cu.curStage||0)<TOTAL-1){cu.cur_stage=stageIdx+1;cu.curStage=stageIdx+1;}
-  await updateUserDB(cu);
-  await fetchAllUsers();
+  cu.cs=Math.max(cu.cs||0,stageIdx+1);
+  if((cu.curStage||0)<TOTAL-1)cu.curStage=stageIdx+1;
+  saveLocal();
+  if(SB_OK)await syncUser(cu);
+  await loadAllUsersFromSB();
   setFb('🏆 שלב '+(stageIdx+1)+' הושלם!','');
   setTimeout(()=>{stopCamera();if(stopDemoFn){stopDemoFn();stopDemoFn=null;}goto('home');},2000);
 }
+ 
 function setFb(msg,cls){const el=document.getElementById('fb');if(el){el.textContent=msg;el.className='fbpill'+(cls?' '+cls:'');}}
 function setFb2(msg,cls){const el=document.getElementById('chal-fb');if(el){el.textContent=msg;el.className='fbpill'+(cls?' '+cls:'');}}
-
+ 
 // ══════════════════════════════════
 // CHALLENGE
 // ══════════════════════════════════
@@ -1306,48 +1184,51 @@ function startChallenge(){
   chalPushups=0;chalSquats=0;chalSitups=0;chalPhase='pushup';livePts=0;phase='up';floorOk=false;lastRepMs=0;
   ['c-pushups','c-squats','c-situps','chal-rounds'].forEach(id=>{const el=document.getElementById(id);if(el)el.textContent='0';});
   document.getElementById('chal-round-pill').textContent='סיבוב 1';
-  document.getElementById('chal-pr').textContent=cu.challenge_pr||cu.challengePr||'—';
+  document.getElementById('chal-pr').textContent=cu.challengePr||'—';
   document.getElementById('chal-warn').style.display='none';
-  ['push','squat','situp'].forEach(k=>{const el=document.getElementById('cc-'+k+'-box');if(el)el.style.border='.5px solid '+(k==='push'?'var(--g)':'var(--bdr)');});
+  ['push','squat','situp'].forEach(k=>{const el=document.getElementById('cc-'+k+'-box');if(el)el.style.borderColor=k==='push'?'var(--g)':'var(--bdr)';});
   setFb2('התחל עם שכיבות סמיכה! 💪','');
   initChalCam();
 }
-
+ 
 async function endChallenge(){
   const rounds=Math.min(chalPushups,chalSquats,chalSitups);
   stopCamera();
-  const oldPR=cu.challenge_pr||cu.challengePr||0;
+  const oldPR=cu.challengePr||0;
   if(rounds>oldPR){
-    cu.challenge_pr=rounds;cu.challengePr=rounds;
-    await updateUserDB(cu);await fetchAllUsers();
+    cu.challengePr=rounds;saveLocal();
+    if(SB_OK)await syncUser(cu);
+    await loadAllUsersFromSB();
     toast('שיא חדש! 🏆 '+rounds+' סיבובים');
-  } else {
-    toast('הסיבוב שלך: '+rounds+'. השיא: '+oldPR);
-  }
+  } else toast('הסיבוב שלך: '+rounds+'. השיא: '+oldPR);
   goto('rank');sideNav('challenge');
 }
-
+ 
 async function initChalCam(){
   stopCamera();
   if(!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia){setFb2('נדרש HTTPS','bad');return;}
   try{
     camStream=await navigator.mediaDevices.getUserMedia({video:{facingMode:'user',width:{ideal:640},height:{ideal:480}},audio:false});
     const vid=document.getElementById('chal-vid'),cvs=document.getElementById('chal-cvs');
-    vid.srcObject=camStream;
-    await new Promise(res=>vid.onloadedmetadata=res);
+    vid.srcObject=camStream;await new Promise(res=>vid.onloadedmetadata=res);
     cvs.width=vid.videoWidth||640;cvs.height=vid.videoHeight||480;
     if(typeof Pose==='undefined'){chalSim();return;}
     const pose=new Pose({locateFile:f=>`https://cdn.jsdelivr.net/npm/@mediapipe/pose@0.5.1675469404/${f}`});
     pose.setOptions({modelComplexity:1,smoothLandmarks:true,enableSegmentation:false,minDetectionConfidence:0.55,minTrackingConfidence:0.55});
-    pose.onResults(r=>{if(!poseOn||!r.poseLandmarks)return;const lm=smooth(r.poseLandmarks);drawSkel(lm,cvs);detectAny(lm,chalPhase==='pushup'?'pushup':chalPhase==='squat'?'squat':'situp',true,document.getElementById('chal-warn'));});
+    pose.onResults(r=>{if(!poseOn||!r.poseLandmarks)return;const lm=smooth(r.poseLandmarks);drawSkel(lm,cvs);const t=chalPhase==='pushup'?'pushup':chalPhase==='squat'?'squat':'situp';detectAny(lm,t,true,document.getElementById('chal-warn'));});
     poseOn=true;
     const cam=new Camera(vid,{onFrame:async()=>{if(poseOn&&camStream)await pose.send({image:vid});},width:640,height:480});
     cam.start();document.getElementById('chal-aibadge').textContent='⬤ AI POSE';
     setFb2('עמוד מול המצלמה','');
   }catch(e){chalSim();}
 }
-function chalSim(){poseOn=true;const cvs=document.getElementById('chal-cvs');const ctx=cvs.getContext('2d');let ph=0;function draw(){if(!poseOn)return;cvs.width=cvs.offsetWidth||320;cvs.height=200;ctx.clearRect(0,0,cvs.width,cvs.height);ph+=0.04;drawSimBody(ctx,cvs.width,cvs.height,ph);animId=requestAnimationFrame(draw);}draw();}
-
+ 
+function chalSim(){
+  poseOn=true;const cvs=document.getElementById('chal-cvs');const ctx=cvs.getContext('2d');let ph=0;
+  function draw(){if(!poseOn)return;cvs.width=cvs.offsetWidth||320;cvs.height=200;ctx.clearRect(0,0,cvs.width,cvs.height);ph+=0.04;drawSimBody(ctx,cvs.width,cvs.height,ph);animId=requestAnimationFrame(draw);}
+  draw();
+}
+ 
 // ══════════════════════════════════
 // CAMERA
 // ══════════════════════════════════
@@ -1358,7 +1239,7 @@ async function initCam(){
   if(!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia){
     document.getElementById('cam-perm').style.display='flex';
     document.getElementById('camwrap').style.display='none';
-    document.getElementById('cam-perm-msg').textContent='נדרש HTTPS. העלה ל-GitHub Pages.';return;
+    document.getElementById('cam-perm-msg').textContent='נדרש HTTPS.';return;
   }
   if(camGranted){try{await startCam();}catch(e){sim();}return;}
   try{await startCam();camGranted=true;}
@@ -1368,13 +1249,11 @@ async function requestCam(){document.getElementById('cam-perm').style.display='n
 async function startCam(){
   const vid=document.getElementById('vid'),cvs=document.getElementById('cvs');
   camStream=await navigator.mediaDevices.getUserMedia({video:{facingMode:'user',width:{ideal:640},height:{ideal:480}},audio:false});
-  vid.srcObject=camStream;
-  await new Promise(res=>vid.onloadedmetadata=res);
+  vid.srcObject=camStream;await new Promise(res=>vid.onloadedmetadata=res);
   cvs.width=vid.videoWidth||640;cvs.height=vid.videoHeight||480;
   setFb('טוען AI...','');loadPose(vid,cvs);
 }
 function stopCamera(){poseOn=false;if(animId){cancelAnimationFrame(animId);animId=null;}if(camStream){camStream.getTracks().forEach(t=>t.stop());camStream=null;}smoothed=null;lastUserLm=null;}
-
 function loadPose(vid,cvs){
   if(typeof Pose==='undefined'){sim();return;}
   try{
@@ -1383,207 +1262,166 @@ function loadPose(vid,cvs){
     pose.onResults(r=>onRes(r,cvs));
     poseOn=true;
     const cam=new Camera(vid,{onFrame:async()=>{if(poseOn&&camStream)await pose.send({image:vid});},width:640,height:480});
-    cam.start();
-    document.getElementById('aibadge').textContent='⬤ AI POSE';
-    setFb('עמוד מול המצלמה','');
+    cam.start();document.getElementById('aibadge').textContent='⬤ AI POSE';setFb('עמוד מול המצלמה','');
   }catch(e){sim();}
 }
-
+ 
 function smooth(raw){
   if(!raw)return null;
   if(!smoothed||smoothed.length!==raw.length){smoothed=raw.map(p=>({...p}));return smoothed;}
   for(let i=0;i<raw.length;i++){smoothed[i].x=smoothed[i].x*(1-ALPHA)+raw[i].x*ALPHA;smoothed[i].y=smoothed[i].y*(1-ALPHA)+raw[i].y*ALPHA;smoothed[i].z=smoothed[i].z*(1-ALPHA)+raw[i].z*ALPHA;smoothed[i].visibility=raw[i].visibility;}
   return smoothed;
 }
-
-// ══════════════════════════════════
-// DRAW SKELETON (live camera)
-// ══════════════════════════════════
+ 
 const BONES=[[11,13],[13,15],[12,14],[14,16],[11,12],[11,23],[12,24],[23,24],[23,25],[25,27],[24,26],[26,28],[27,31],[28,32]];
 const KEYPTS=new Set([11,12,13,14,15,16,23,24,25,26]);
 const HEELS=new Set([27,28]);
 const SKIP=new Set([29,30]);
-
+ 
 function drawSkel(lm,cvs){
   const ctx=cvs.getContext('2d');ctx.clearRect(0,0,cvs.width,cvs.height);
   ctx.strokeStyle='rgba(0,230,118,.85)';ctx.lineWidth=2.5;ctx.lineCap='round';
   BONES.forEach(([a,b])=>{if(SKIP.has(a)||SKIP.has(b))return;const pa=lm[a],pb=lm[b];if(!pa||!pb||(pa.visibility||0)<0.3||(pb.visibility||0)<0.3)return;ctx.beginPath();ctx.moveTo(pa.x*cvs.width,pa.y*cvs.height);ctx.lineTo(pb.x*cvs.width,pb.y*cvs.height);ctx.stroke();});
   lm.forEach((p,i)=>{if(SKIP.has(i)||(p.visibility||0)<0.3)return;const x=p.x*cvs.width,y=p.y*cvs.height;const isK=KEYPTS.has(i),isH=HEELS.has(i);ctx.beginPath();ctx.arc(x,y,isK||isH?6:3,0,Math.PI*2);ctx.fillStyle=isH?'#ffab40':isK?'#00e676':'rgba(0,230,118,.4)';ctx.fill();if(isK||isH){ctx.strokeStyle='rgba(0,0,0,.5)';ctx.lineWidth=1.5;ctx.stroke();}});
 }
-
+ 
 function ang(a,b,c){const bax=a.x-b.x,bay=a.y-b.y,bcx=c.x-b.x,bcy=c.y-b.y;const mag=Math.sqrt(bax*bax+bay*bay)*Math.sqrt(bcx*bcx+bcy*bcy);if(mag<1e-4)return 180;return Math.round(Math.acos(Math.min(1,Math.max(-1,(bax*bcx+bay*bcy)/mag)))*180/Math.PI);}
-
+ 
 function onRes(results,cvs){
   if(!poseOn||!results.poseLandmarks)return;
   const lm=smooth(results.poseLandmarks);
   drawSkel(lm,cvs);lastUserLm=lm;
-  if(demoVisible&&lastUserLm){drawUserOnDemo(document.getElementById('user-demo-cvs'),lm);updateMatch(lm);}
+  if(demoVisible&&lastUserLm){drawUserDemo(document.getElementById('user-demo-cvs'),lm);updateMatch(lm);}
   const s=getStage(stageIdx+1);
   const ex=EX[s.exs[0].e];
-  if(ex) detectAny(lm,ex.t,false,document.getElementById('wo-warn'));
+  if(ex)detectAny(lm,ex.t,false,document.getElementById('wo-warn'));
 }
-
-function drawUserOnDemo(cvs,lm){
+ 
+function drawUserDemo(cvs,lm){
   const ctx=cvs.getContext('2d');cvs.width=cvs.offsetWidth||160;
   const W=cvs.width,H=parseInt(cvs.getAttribute('height'))||160;ctx.clearRect(0,0,W,H);
-  ctx.strokeStyle='rgba(255,171,64,.04)';ctx.lineWidth=1;
-  for(let gx=0;gx<W;gx+=24){ctx.beginPath();ctx.moveTo(gx,0);ctx.lineTo(gx,H);ctx.stroke();}
-  const DB=[[11,13],[13,15],[12,14],[14,16],[11,12],[11,23],[12,24],[23,24],[23,25],[25,27],[24,26],[26,28]];
   ctx.strokeStyle='rgba(255,171,64,.85)';ctx.lineWidth=2.5;ctx.lineCap='round';
+  const DB=[[11,13],[13,15],[12,14],[14,16],[11,12],[11,23],[12,24],[23,24],[23,25],[25,27],[24,26],[26,28]];
   DB.forEach(([a,b])=>{const pa=lm[a],pb=lm[b];if(!pa||!pb||(pa.visibility||0)<0.3||(pb.visibility||0)<0.3)return;ctx.beginPath();ctx.moveTo(pa.x*W,pa.y*H);ctx.lineTo(pb.x*W,pb.y*H);ctx.stroke();});
   [11,12,13,14,15,16,23,24,25,26,27,28].forEach(i=>{const p=lm[i];if(!p||(p.visibility||0)<0.3)return;ctx.beginPath();ctx.arc(p.x*W,p.y*H,[11,12,13,14,15,16,23,24,25,26].includes(i)?5:3,0,Math.PI*2);ctx.fillStyle='#ffab40';ctx.fill();});
-  const nose=lm[0];if(nose&&(nose.visibility||0)>0.3){ctx.beginPath();ctx.arc(nose.x*W,nose.y*H,10,0,Math.PI*2);ctx.strokeStyle='rgba(255,171,64,.8)';ctx.lineWidth=2;ctx.stroke();}
+  const nose=lm[0];if(nose&&(nose.visibility||0)>0.3){ctx.beginPath();ctx.arc(nose.x*W,nose.y*H,9,0,Math.PI*2);ctx.strokeStyle='rgba(255,171,64,.8)';ctx.lineWidth=2;ctx.stroke();}
 }
-
+ 
 function updateMatch(lm){
-  if(!lastDemoFrame) return;
+  if(!lastDemoFrame)return;
   const uSY=(lm[11].y+lm[12].y)/2,uHY=(lm[23].y+lm[24].y)/2;
-  const dSY=(lastDemoFrame.ls?lastDemoFrame.ls[1]:lastDemoFrame.lsh?lastDemoFrame.lsh[1]:0.2);
-  const dHY=(lastDemoFrame.lh?lastDemoFrame.lh[1]:lastDemoFrame.lhi?lastDemoFrame.lhi[1]:0.5);
+  const dSY=lastDemoFrame.ls?lastDemoFrame.ls[1]:0.2;
+  const dHY=lastDemoFrame.lh?lastDemoFrame.lh[1]:0.5;
   const diff=Math.abs((uHY-uSY)-(dHY-dSY));
   const score=Math.max(0,Math.min(100,Math.round((1-diff*4)*100)));
   document.getElementById('match-pct').textContent=score+'%';
   const bar=document.getElementById('match-bar');bar.style.width=score+'%';
   bar.style.background=score>70?'var(--g)':score>40?'var(--warn)':'var(--red)';
 }
-
+ 
 // ══════════════════════════════════
-// DETECTION — FIXED SENSORS
-// KEY FIX for pushup: must verify body is HORIZONTAL (not just elbow angle)
-// KEY FIX for squat: use VERTICAL movement, not side-to-side
-// KEY FIX: knee-on-floor check using heel landmarks
+// DETECTION — fixed sensors
 // ══════════════════════════════════
-function detectAny(lm, type, isChallenge, warnEl){
+function detectAny(lm,type,isChallenge,warnEl){
   function vis(i){return lm[i]?lm[i].visibility||0:0;}
-  const fb=isChallenge?setFb2:setFb;
-  const warn=warnEl;
-
-  // Anti-cheat: body must be visible
   const bodyVis=(vis(11)+vis(12)+vis(23)+vis(24))/4;
-  if(bodyVis<0.5){fb('הרחק טלפון — כל הגוף','bad');return;}
-
-  function elbAng(){
-    const lv=vis(13)+vis(15),rv=vis(14)+vis(16);
-    return lv>=rv?ang(lm[11],lm[13],lm[15]):ang(lm[12],lm[14],lm[16]);
-  }
-  function kneAng(){
-    const lv=vis(25)+vis(27),rv=vis(26)+vis(28);
-    return lv>=rv?ang(lm[23],lm[25],lm[27]):ang(lm[24],lm[26],lm[28]);
-  }
-
+  if(bodyVis<0.5){(isChallenge?setFb2:setFb)('הרחק טלפון — כל הגוף','bad');return;}
+  const fb=isChallenge?setFb2:setFb;
+ 
+  function elbAng(){const lv=vis(13)+vis(15),rv=vis(14)+vis(16);return lv>=rv?ang(lm[11],lm[13],lm[15]):ang(lm[12],lm[14],lm[16]);}
+  function kneAng(){const lv=vis(25)+vis(27),rv=vis(26)+vis(28);return lv>=rv?ang(lm[23],lm[25],lm[27]):ang(lm[24],lm[26],lm[28]);}
+ 
   try{
     if(type==='pushup'){
       const elb=elbAng();
-      const sY=(lm[11].y+lm[12].y)/2;
-      const hY=(lm[23].y+lm[24].y)/2;
-      const kneeY=(lm[25].y+lm[26].y)/2;
-
-      // Heel detection
-      const lhv=vis(27)>0.3?lm[27].y:null, rhv=vis(28)>0.3?lm[28].y:null;
+      const sY=(lm[11].y+lm[12].y)/2,hY=(lm[23].y+lm[24].y)/2,kneeY=(lm[25].y+lm[26].y)/2;
+      const lhv=vis(27)>0.3?lm[27].y:null,rhv=vis(28)>0.3?lm[28].y:null;
       const heelY=lhv&&rhv?(lhv+rhv)/2:lhv||rhv||null;
-
-      // BODY MUST BE HORIZONTAL:
-      // When lying for pushup, shoulder Y and heel Y should be close (both near same horizontal level)
-      // Tolerance: < 0.28 (generous for varying camera angles)
-      let bodyFlat, kneesUp;
+ 
+      // Body must be horizontal
+      let bodyFlat,kneesUp;
       if(heelY!=null){
         bodyFlat=Math.abs(sY-heelY)<0.28;
-        // KNEES MUST BE OFF FLOOR: knee Y must be above heel Y (smaller Y = higher on screen)
-        // If knee Y is close to heel Y, the person is resting on knees
-        kneesUp=kneeY < heelY - 0.05;
+        // Knees off floor: knee Y must be above (less than) heel Y by threshold
+        // If knee Y close to heel Y → person is kneeling = CHEAT
+        kneesUp=kneeY<heelY-0.06;
       } else {
-        // Fallback: hip close to shoulder (horizontal)
         bodyFlat=Math.abs(sY-hY)<0.20;
         kneesUp=true;
       }
-
+ 
       if(phase==='up'){
         if(elb<105){
-          phase='down';
-          floorOk=bodyFlat&&kneesUp;
-          if(!bodyFlat){if(warn){warn.style.display='block';warn.textContent='⚠ שכב שטוח על הרצפה!';}fb('שכב שטוח','bad');}
-          else if(!kneesUp){if(warn){warn.style.display='block';warn.textContent='⚠ ברכיים על הרצפה = רמאות!';}fb('הרם ברכיים!','bad');}
-          else{if(warn)warn.style.display='none';fb('דחוף! 💪','');livePts++;}
+          phase='down';floorOk=bodyFlat&&kneesUp;
+          if(!bodyFlat){if(warnEl){warnEl.style.display='block';warnEl.textContent='⚠ שכב שטוח על הרצפה!';}fb('שכב שטוח','bad');}
+          else if(!kneesUp){if(warnEl){warnEl.style.display='block';warnEl.textContent='⚠ ברכיים על הרצפה = לא מחשיב!';}fb('הרם ברכיים!','bad');}
+          else{if(warnEl)warnEl.style.display='none';fb('דחוף! 💪','');livePts++;}
         } else fb('ירד!','');
       } else {
         if(elb>150){
           phase='up';
-          if(floorOk){if(warn)warn.style.display='none';livePts+=4;countRep(isChallenge);}
-          else{if(warn){warn.style.display='block';warn.textContent='⚠ לא קיבל — תיקון טכניקה';}fb('נסה שוב','bad');}
+          if(floorOk){if(warnEl)warnEl.style.display='none';livePts+=4;countRep(isChallenge);}
+          else{if(warnEl){warnEl.style.display='block';warnEl.textContent='⚠ לא קיבל — תיקון טכניקה';}fb('נסה שוב','bad');}
           floorOk=false;
         } else fb('דחוף למעלה!','');
       }
       return;
     }
-
+ 
     if(type==='squat'){
       const knee=kneAng();
-      const sY=(lm[11].y+lm[12].y)/2;
-      const hY=(lm[23].y+lm[24].y)/2;
-      const kY=(lm[25].y+lm[26].y)/2;
-
-      // Heel detection for squat depth
-      const lhv=vis(27)>0.3?lm[27].y:null, rhv=vis(28)>0.3?lm[28].y:null;
+      const sY=(lm[11].y+lm[12].y)/2,hY=(lm[23].y+lm[24].y)/2;
+      const lhv=vis(27)>0.3?lm[27].y:null,rhv=vis(28)>0.3?lm[28].y:null;
       const heelY=lhv&&rhv?(lhv+rhv)/2:lhv||rhv||null;
-
-      // Check that person is STANDING (not lying) — shoulder Y should be well above hip Y
-      // In standing/squat position: shoulder Y < hip Y (shoulder is higher on screen)
-      const isStanding=sY<hY-0.05;
-      if(!isStanding && heelY==null){fb('עמוד לפני סקוואט','bad');return;}
-
-      // Deep squat check: hip must drop significantly
-      // Using angle at knee (must reach < 115°) AND position check
-      let deepOk;
-      if(heelY!=null&&heelY>sY){
-        // Normalize: 0=shoulder level, 1=heel level
-        const totalH=heelY-sY;
-        deepOk=(hY-sY)/totalH > 0.58; // hip is at least 58% of way from shoulder to heel
-      } else {
-        // Fallback: hip Y relative to knee Y
-        deepOk=hY > kY*0.76;
-      }
-
+ 
+      // Must see heels for squat depth check
+      if(heelY===null){fb('הרחק טלפון — הצג עקבים','bad');return;}
+ 
+      // Verify person is STANDING, not lying
+      // In standing: sY (shoulder) < hY (hip) in normalized coords
+      const isUpright=sY<hY;
+      if(!isUpright){fb('עמוד לפני סקוואט','bad');return;}
+ 
+      // Deep squat: hip must drop — normalized hip Y relative to shoulder-heel range
+      const totalH=heelY-sY;
+      const deepOk=totalH>0.1?(hY-sY)/totalH>0.58:false;
+ 
       if(phase==='up'){
         if(knee<115){
           phase='down';floorOk=deepOk;
-          if(!deepOk){if(warn){warn.style.display='block';warn.textContent='⚠ ירד עמוק יותר — ירך מקבילה!';}fb('ירד עמוק!','bad');}
-          else{if(warn)warn.style.display='none';fb('עלה!','');livePts++;}
+          if(!deepOk){if(warnEl){warnEl.style.display='block';warnEl.textContent='⚠ ירד עמוק יותר!';}fb('ירד עמוק!','bad');}
+          else{if(warnEl)warnEl.style.display='none';fb('עלה!','');livePts++;}
         } else fb('כופף ברכיים!','');
       } else {
         if(knee>163){
           phase='up';
-          if(floorOk){if(warn)warn.style.display='none';livePts+=4;countRep(isChallenge);}
-          else{if(warn){warn.style.display='block';warn.textContent='⚠ צריך עמוק יותר'}fb('נסה שוב','bad');}
+          if(floorOk){if(warnEl)warnEl.style.display='none';livePts+=4;countRep(isChallenge);}
+          else{if(warnEl){warnEl.style.display='block';warnEl.textContent='⚠ צריך עמוק יותר';}fb('נסה שוב','bad');}
           floorOk=false;
         } else fb('דחוף למעלה!','');
       }
       return;
     }
-
+ 
     if(type==='situp'){
       const sY=(lm[11].y+lm[12].y)/2,hY=(lm[23].y+lm[24].y)/2;
       const raised=hY-sY;
-      if(phase==='up'){
-        if(raised>0.12){phase='down';floorOk=true;if(warn)warn.style.display='none';fb('חזור למטה','');livePts++;}
-        else fb('הרם את הגוף!','');
-      } else {
-        if(raised<0.04){phase='up';if(floorOk){livePts+=4;countRep(isChallenge);}floorOk=false;}
-        else fb('שכב שטוח','');
-      }
+      if(phase==='up'){if(raised>0.12){phase='down';floorOk=true;if(warnEl)warnEl.style.display='none';fb('חזור למטה','');livePts++;}else fb('הרם את הגוף!','');}
+      else{if(raised<0.04){phase='up';if(floorOk){livePts+=4;countRep(isChallenge);}floorOk=false;}else fb('שכב שטוח','');}
       return;
     }
-
+ 
     if(type==='plank'){
       const sY=(lm[11].y+lm[12].y)/2,hY=(lm[23].y+lm[24].y)/2;
-      if(Math.abs(sY-hY)>0.15){if(warn){warn.style.display='block';warn.textContent='⚠ שמור גוף ישר!';}fb('יישר גוף','bad');return;}
-      if(warn)warn.style.display='none';livePts=Math.min(livePts+1,20);
+      if(Math.abs(sY-hY)>0.15){if(warnEl){warnEl.style.display='block';warnEl.textContent='⚠ שמור גוף ישר!';}fb('יישר גוף','bad');return;}
+      if(warnEl)warnEl.style.display='none';livePts=Math.min(livePts+1,20);
       const minK=Math.min(ang(lm[23],lm[25],lm[27]),ang(lm[24],lm[26],lm[28]));
       if(phase==='up'&&minK<85){phase='down';fb('חזור!','');}
       else if(phase==='down'&&minK>155){phase='up';livePts+=4;countRep(isChallenge);}
       else fb('המשך!','');
       return;
     }
-
+ 
     if(type==='burpee'){
       const sY=(lm[11].y+lm[12].y)/2;
       if(phase==='up'&&sY>0.55){phase='down';floorOk=true;fb('קפוץ!','');livePts++;}
@@ -1592,82 +1430,57 @@ function detectAny(lm, type, isChallenge, warnEl){
     }
   }catch(e){}
 }
-
-// ══════════════════════════════════
-// SIMULATION (no camera)
-// ══════════════════════════════════
-function drawSimBody(ctx, W, H, ph){
-  const cx=W/2, cy=H*.5;
-  const sw=Math.sin(ph)*12, bw=Math.abs(Math.sin(ph))*10;
-  // Points
-  const head=[cx+sw*.2, cy-56+bw*.2];
-  const neck=[cx+sw*.15, cy-44+bw*.3];
-  const ls=[cx-28, cy-38+bw*.4], rs=[cx+28, cy-38+bw*.4];
-  const le=[cx-42+sw*.1, cy-14+bw*.5], re=[cx+42+sw*.5, cy-14+bw*.5];
-  const lw=[cx-38, cy+10+bw*.6], rw=[cx+38, cy+10+bw*.6];
-  const lh=[cx-12, cy+0+bw*.5], rh=[cx+12, cy+0+bw*.5];
-  const lk=[cx-16+sw*.1, cy+34+bw*.7], rk=[cx+16+sw*.3, cy+34+bw*.7];
-  const lf=[cx-16, cy+58+bw*.9], rf=[cx+16, cy+58+bw*.9];
-
-  ctx.strokeStyle='#00e676';ctx.lineWidth=3;ctx.lineCap='round';ctx.lineJoin='round';
-
+ 
+// SIMULATION
+function drawSimBody(ctx,W,H,ph){
+  const cx=W/2,cy=H*.5,sw=Math.sin(ph)*12,bw=Math.abs(Math.sin(ph))*10;
+  const head=[cx+sw*.2,cy-56+bw*.2],neck=[cx+sw*.15,cy-44+bw*.3];
+  const ls=[cx-28,cy-38+bw*.4],rs=[cx+28,cy-38+bw*.4];
+  const le=[cx-42+sw*.1,cy-14+bw*.5],re=[cx+42+sw*.5,cy-14+bw*.5];
+  const lw=[cx-38,cy+10+bw*.6],rw=[cx+38,cy+10+bw*.6];
+  const lh=[cx-12,cy+bw*.5],rh=[cx+12,cy+bw*.5];
+  const lk=[cx-16+sw*.1,cy+34+bw*.7],rk=[cx+16+sw*.3,cy+34+bw*.7];
+  const lf=[cx-16,cy+58+bw*.9],rf=[cx+16,cy+58+bw*.9];
   // Torso fill
   ctx.beginPath();ctx.moveTo(ls[0],ls[1]);ctx.lineTo(rs[0],rs[1]);ctx.lineTo(rh[0],rh[1]);ctx.lineTo(lh[0],lh[1]);ctx.closePath();
   ctx.fillStyle='rgba(0,230,118,.1)';ctx.fill();
-
-  // Limbs
-  [[neck,ls],[neck,rs],[ls,le],[le,lw],[rs,re],[re,rw],[neck,lh],[neck,rh],[lh,rh],[lh,lk],[rh,rk],[lk,lf],[rk,rf]].forEach(([a,b])=>{
-    ctx.beginPath();ctx.moveTo(a[0],a[1]);ctx.lineTo(b[0],b[1]);ctx.stroke();
-  });
-
-  // Head
-  ctx.beginPath();ctx.arc(head[0],head[1],12,0,Math.PI*2);
-  ctx.fillStyle='rgba(0,230,118,.15)';ctx.fill();ctx.strokeStyle='#00e676';ctx.lineWidth=2.5;ctx.stroke();
-  // Eyes
-  ctx.fillStyle='#00e676';
-  ctx.beginPath();ctx.arc(head[0]-4,head[1]-2,2,0,Math.PI*2);ctx.fill();
-  ctx.beginPath();ctx.arc(head[0]+4,head[1]-2,2,0,Math.PI*2);ctx.fill();
-  // Neck
-  ctx.strokeStyle='#00e676';ctx.lineWidth=3;
-  ctx.beginPath();ctx.moveTo(head[0],head[1]+12);ctx.lineTo(neck[0],neck[1]);ctx.stroke();
-
-  // Key joints
-  [ls,rs,le,re,lk,rk,lh,rh].forEach(p=>{
-    ctx.beginPath();ctx.arc(p[0],p[1],5.5,0,Math.PI*2);
-    ctx.fillStyle='#00e676';ctx.fill();ctx.strokeStyle='rgba(0,0,0,.5)';ctx.lineWidth=1.5;ctx.stroke();
-  });
-  // Heels in orange
-  [lf,rf].forEach(p=>{
-    ctx.beginPath();ctx.arc(p[0],p[1],5,0,Math.PI*2);
-    ctx.fillStyle='#ffab40';ctx.fill();ctx.strokeStyle='rgba(0,0,0,.4)';ctx.lineWidth=1.5;ctx.stroke();
-  });
+  ctx.strokeStyle='#00e676';ctx.lineWidth=3;ctx.lineCap='round';
+  [[neck,ls],[neck,rs],[ls,le],[le,lw],[rs,re],[re,rw],[neck,lh],[neck,rh],[lh,rh],[lh,lk],[rh,rk],[lk,lf],[rk,rf]].forEach(([a,b])=>{ctx.beginPath();ctx.moveTo(a[0],a[1]);ctx.lineTo(b[0],b[1]);ctx.stroke();});
+  ctx.beginPath();ctx.arc(head[0],head[1],12,0,Math.PI*2);ctx.fillStyle='rgba(0,230,118,.15)';ctx.fill();ctx.strokeStyle='#00e676';ctx.lineWidth=2.5;ctx.stroke();
+  ctx.fillStyle='#00e676';ctx.beginPath();ctx.arc(head[0]-4,head[1]-2,2,0,Math.PI*2);ctx.fill();ctx.beginPath();ctx.arc(head[0]+4,head[1]-2,2,0,Math.PI*2);ctx.fill();
+  ctx.beginPath();ctx.moveTo(head[0],head[1]+12);ctx.lineTo(neck[0],neck[1]);ctx.strokeStyle='#00e676';ctx.lineWidth=3;ctx.stroke();
+  [ls,rs,le,re,lk,rk,lh,rh].forEach(p=>{ctx.beginPath();ctx.arc(p[0],p[1],5.5,0,Math.PI*2);ctx.fillStyle='#00e676';ctx.fill();ctx.strokeStyle='rgba(0,0,0,.5)';ctx.lineWidth=1.5;ctx.stroke();});
+  [lf,rf].forEach(p=>{ctx.beginPath();ctx.arc(p[0],p[1],5,0,Math.PI*2);ctx.fillStyle='#ffab40';ctx.fill();ctx.strokeStyle='rgba(0,0,0,.4)';ctx.lineWidth=1.5;ctx.stroke();});
 }
-
+ 
 function sim(){
   poseOn=true;document.getElementById('aibadge').textContent='⬤ ללא מצלמה';setFb('ללא מצלמה','bad');
   const cvs=document.getElementById('cvs');const ctx=cvs.getContext('2d');let ph=0;
   function draw(){if(!poseOn)return;cvs.width=cvs.offsetWidth||320;cvs.height=200;ctx.clearRect(0,0,cvs.width,cvs.height);ph+=0.04;drawSimBody(ctx,cvs.width,cvs.height,ph);animId=requestAnimationFrame(draw);}
   draw();
 }
-
+ 
 // ══════════════════════════════════
 // INIT
 // ══════════════════════════════════
+loadLocal();
 initSB().then(async()=>{
   const sess=loadSess();
   if(sess){
-    // Try to load from Supabase first
-    if(SB_OK){
-      const rows=await sbGet('users','id=eq.'+sess);
+    let user=users[sess];
+    // Try Supabase
+    if(SB_OK&&!user){
+      const rows=await sbReq('users?id=eq.'+sess+'&select=*');
       if(rows&&rows[0]){
-        cu=rows[0];
-        cu.curStage=cu.cur_stage||0;cu.challengePr=cu.challenge_pr||0;cu.groupId=cu.group_id||'';cu.lastDay=cu.last_day||'';
-        await fetchAllUsers();saveLocal();enterApp();return;
+        user=rows[0];user.curStage=user.cur_stage||0;user.lastDay=user.last_day||'';user.challengePr=user.challenge_pr||0;user.groupId=user.group_id||'';
+        users[user.id]=user;saveLocal();
       }
     }
-    // Fallback: local storage
-    const local=loadLocalUser();
-    if(local&&local.id===sess){cu=local;cu.curStage=cu.cur_stage||cu.curStage||0;await fetchAllUsers();enterApp();}
+    if(user&&!user._remote){
+      cu=user;
+      await loadAllUsersFromSB();
+      enterApp();
+    }
   }
 });
 </script>
